@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪类选择器</title>
+    <style>
+        body {
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+    <h4>1.5伪类选择器</h4>
+    伪类选择器用于向某些选择器添加特殊效果，比如给链接添加效果等等<br>
+    伪类选择器书写最大的特点是用冒号(:)表示,比如:hover、:first-child.
+
+    <h5>1.5.1链接伪类选择器</h5>
+    <ul>
+        <li>a:link选择所有未被访问的链接</li>
+        <li>a:visited选择所有已被访问的链接</li>
+        <li>a:hover选择鼠标指针位于其上的链接</li>
+        <li>a:active选择活动链接(鼠标按下未弹起的链接)</li>
+    </ul>
+    <style>
+        /* 未被访问的链接 */
+        a:link {
+            color: black;
+            text-decoration: none;
+        }
+
+        /* 选择点击过的链接 */
+        a:visited {
+            color: blue;
+        }
+
+        /* 选择鼠标经过的链接 */
+        a:hover {
+            color: skyblue;
+        }
+
+        /* 选择的是鼠标按下还没弹起的链接 */
+        a:active {
+            color: brown;
+        }
+
+        ol {
+            color: red;
+        }
+    </style>
+    如：
+    <a href="#">我是网址</a>
+    <ol>
+        <li>要按照LVHA的顺序声明这四个选择器</li>
+        <li>因为a链接式浏览器中具有默认样式，所以我们实际工作中都需要给链接单独制定样式</li>
+        <li>在平时开发一般都只用链接正常状态(也就是a{})和hover选择器就够了</li>
+    </ol>
+
+    <h5>1.5.2 :focus伪类选择器</h5>
+    <ul>
+        <li>:focus伪类选择器用于选取获得焦点的表单元素</li>
+        <li>一般情况该选择器用于input标签，因此该选择器也主要针对表单元素来说</li>
+    </ul>
+
+    <style>
+        input:focus {
+            background-color: rgb(41, 194, 224);
+            color: rgb(228, 10, 6);
+        }
+    </style>
+    如：
+    <input type="text">
+    <input type="text">
+    <input type="text">
+
+</body>
+
+</html>

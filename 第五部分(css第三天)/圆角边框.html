@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>圆角边框</title>
+    <style>
+        body {
+            font-weight: 700;
+        }
+
+        .class1 {
+            width: 300px;
+            height: 150px;
+            background-color: aqua;
+            border-radius: 10px;
+
+        }
+
+        .class2 {
+            width: 300px;
+            height: 150px;
+            background-color: orange;
+            /* 如果是矩形，要设置为圆角矩形和高度的一半，大于高度的一半就会保持一半时的效果，小于高度的一半就会角就会偏向90度*/
+            border-radius: 75px;
+        }
+
+        .class3 {
+            width: 300px;
+            height: 300px;
+            background-color: orange;
+            /* 如果是正方形想要圆，就直接设置宽或高的一半即可 */
+            /* border-radius: 150px; */
+            border-radius: 50%;
+
+        }
+
+        .class4 {
+            width: 300px;
+            height: 150px;
+            background-color: orange;
+            /* 如果是矩形，要设置为圆角矩形和高度的一半，大于高度的一半就会保持一半时的效果，小于高度的一半就会角就会偏向90度*/
+            border-radius: 75px 45px 30px 100px;
+            /* 或者拆开写,如左上角是以下，其他同理*/
+            /* border-top-left-radius: 15px; */
+        }
+    </style>
+</head>
+
+<body>
+    <h2>圆角边框</h2>
+    <p>border-radius属性可以设置元素的外边框圆角</p>
+    <p>参数值可以是px或者百分比</p>
+    <p>该属性可以跟是个值，分别代表左上角、右上角、右下角、左下角</p>
+    <div class="class1"></div>
+    <div class="class2"></div>
+    <div class="class3"></div>
+    <div class="class4"></div>
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS的元素显示模式</title>
+    <style>
+        body {
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>1.元素显示模式</h1>
+    元素显示模式就是元素(标签)以什么方式进行显示，比如div标签自己占一行，一行可以放多个span标签.<br>
+    <p>元素一般分为块元素和行内元素两只类型</p>
+
+    <h4>1.1块元素</h4>
+    <div>常见的块元素有h1~h6、p、div、ul、ol、li等</div>
+    <p>div标签是最典型的块元素</p>
+    块元素的特点有：
+    <ol>
+        <li>独占一行</li>
+        <li>高度宽度以及外边距都可以控制</li>
+        <li>宽度默认是容器(父级宽度)的100%</li>
+        <li>是一个容器及盒子，里面可以放行内或者块级元素</li>
+    </ol>
+    <div>注意：文字类的元素内不能放块级元素<br>
+        如p标签，h标签</div>
+
+    <h4>1.2行内元素</h4>
+    <p>常见的行内元素有a标签，strong标签，span标签等</p>
+    <p>span标签是最典型的行内元素</p>
+    行内元素的特点有：
+    <ol>
+        <li>相邻行内元素在一行上，一行可以显示多个</li>
+        <li>高宽直接设置是无效的</li>
+        <li>默认宽度就是它本身内容的宽度</li>
+        <li>行内元素只能容纳文本或其他行内元素</li>
+    </ol>
+    注意：
+    <div>
+        <ul>
+            <li>链接里面不能再放链接</li>
+            <li>特殊情况链接a里面可以放块级元素，但是给a转换下一块级最安全</li>
+        </ul>
+    </div>
+
+    <h4>1.3行内块元素</h4>
+    <p>行内元素有几个特殊标签img标签、input标签、td标签它们同时具有块元素和行内元素的特点</p>
+    行内块元素的特点：
+    <ol>
+        <li>和相邻行内元素(行内块)在一行上，但是他们之间会有空白间隙。一行可以显示多个(行内元素的特点)</li>
+        <li>默认宽度就是它本身内容的宽度(行内元素特点)</li>
+        <li>高度，行高，外边距以及内边距都可以控制(块级元素特点)</li>
+    </ol>
+
+    <h4>1.4元素显示模式转换</h4>
+    <p>特许情况下，我们需要元素模式的转换，简单理解：一个模式的元素需要另一种模式的特性</p>
+    <p>比如想要增加链接a的触发范围</p>
+    <p style="color: red;">行内元素转换为块元素：display:block;</p>
+    如:
+    <style>
+        a {
+            width: 150px;
+            height: 50px;
+            background-color: red;
+            /* 把行内元素a转换为块级元素 */
+            display: block;
+        }
+    </style>
+    <a href="#">我是沉贯溪</a>
+    <a href="#">我是沉贯溪</a>
+
+    <p style="color: red;">块级元素转换为行内元素：display:inline;</p>
+    如:
+    <style>
+        div {
+            width: 300px;
+            height: 100px;
+            background-color: aqua;
+            /* 把div块级元素转换为行内元素 */
+            display: inline;
+        }
+    </style>
+    <div>我是块级元素</div>
+    <div>我是块级元素</div>
+
+    <p style="color: rgb(255, 22, 22);">行内元素转换为行内块元素：display:inline-block</display:inline-b>;</p>
+    <style>
+        span {
+            width: 300px;
+            height: 30px;
+            background-color: orange;
+            display: inline-block;
+        }
+    </style>
+    <span>行内元素转换为行内块元素</span>
+    <span>行内元素转换为行内块元素</span>
+
+
+</body>
+
+</html>

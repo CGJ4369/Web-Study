@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮动</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-weight: 700;
+        }
+
+        .fudong {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>网页盒子有三种布局方式</h2>
+    <p>前面学的是第一种布局标准流布局</p>
+    如：块级元素独占一行，行内元素顺序排列等等
+    <p>现在开始学第二种浮动布局</p>
+    <h3>浮动最典型的应用是可以让多个块级元素一行内排列显示</h3>
+    <h3 class="fudong">网页布局第一准则:多个块级盒子竖着排列的找标准准则，多个块级盒子行着排列的找浮动</h3>
+    <h3 class="fudong">网页布局第二准则:先设置盒子大小，再设置盒子位置</h3>
+
+
+    <h1>1.浮动</h1>
+    <p>float可以创建浮动框，可以移动直到到左边缘或右边缘，如果第一个的盒子是浮动的，那第二个同向的盒子会浮动到紧挨着第一个盒子的边缘</p>
+    如:<br>
+    <style>
+        .left,
+        .right {
+            width: 50px;
+            height: 50px;
+            background-color: aqua;
+            /* 默认是不浮动，也就是none */
+            float: left;
+        }
+
+        .right {
+            float: right;
+        }
+    </style>
+    <div class="right">1</div>
+    <div class="left">2</div>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+	h1 {
+		text-align: center;
+		font-weight: 700;
+		
+	}
+	.time {
+		text-align: center;	
+		color: #666;
+	}
+	
+	.search {
+		font-weight: 700;
+	}
+	
+	.p1 {
+		
+		text-indent: 2em;
+	}
+	
+	.p2 {
+		font: 700 16px "微软雅黑";
+	}
+	
+	img {
+		
+		width: 200px;
+	}
+	
+	a {
+		text-decoration: none;
+		color: blue;
+	}
+	
+	
+	body {
+		font: 16px/26px "微软雅黑";
+	}
+	
+	

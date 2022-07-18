@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盒子模型案例</title>
+    <style>
+        .class1 {
+
+            height: 41px;
+            background-color: #fcfcfc;
+            color: #4c4c4c;
+            border-top: 3px solid orange;
+            border-bottom: 1px solid #edeef0;
+            line-height: 41px;
+        }
+
+        a {
+            /* 用padding值撑开盒子，那两个字的就可以和三个字的距离一样了 */
+            height: 41px;
+            padding: 0px 20px;
+            text-decoration: none;
+            font-size: 16px;
+            background-color: #fcfcfc;
+            color: #4c4c4c;
+            text-align: center;
+            line-height: 41px;
+            display: inline-block;
+        }
+
+        a:hover {
+            background-color: aqua;
+            color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="class1">
+        <a href="#">首页</a>
+        <a href="#">手机客户端</a>
+        <a href="#">移动端</a>
+        <a href="#">关于我们</a>
+    </div>
+</body>
+
+</html>

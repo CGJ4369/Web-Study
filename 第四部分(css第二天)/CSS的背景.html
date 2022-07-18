@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS的背景</title>
+    <style>
+        body {
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>1.背景颜色</h1>
+    background-color属性定义了元素的背景颜色。
+    如:
+    <style>
+        .class1 {
+            width: 200px;
+            height: 50px;
+            background-color: antiquewhite;
+        }
+    </style>
+    <div class="class1"></div>
+    <p>一般情况下元素背景颜色默认值是transparent(透明)，我们也可以手动指定背景颜色为其他或者透明色</p>
+
+    <h1>2.背景图片</h1>
+    background-image属性描述了元素的背景图像。<br>
+    实际开发常见于logo或者一些装饰性的小图片或者是超大的背景图片，优点是非常便于控制位置<br>
+    如：
+    <style>
+        .class2 {
+            width: 200px;
+            height: 50px;
+            /* 默认无图片，也就是none */
+            /* background-image: url(none); */
+            background-image: url(../img/img2.png);
+        }
+    </style>
+    <div class="class2"></div>
+
+    <h1>3.背景平铺</h1>
+    对背景图像进行背景平铺可以使用background-repeat属性<br>
+    如：
+    <style>
+        .class3 {
+            width: 200px;
+            height: 150px;
+            background-image: url(../img/img2.png);
+            /* 1.背景平铺(默认) */
+            /* background-repeat: repeat; */
+            /* 2.背景不平铺 */
+            /* background-repeat: no-repeat; */
+            /* 3.背景图像在横向平铺 */
+            background-repeat: repeat-x;
+            /* 4.背景图片在纵向平铺 */
+            /* background-repeat: repeat-y; */
+            /* 页面元素既可以添加背景颜色也可以添加背景图片 只不过背景图片会压住背景颜色 */
+            background-color: aqua;
+        }
+    </style>
+    <div class="class3"></div>
+
+    <h1>4.背景图片位置</h1>
+    用background-position属性可以改变图片在背景中的位置<br>
+    background-position:x y<br>
+    参数代表的意思是：x坐标和y坐标。可以使用方位名词或者精确单位<br>
+
+    如：
+    <p>4.1使用方位名词</p>
+    <style>
+        .class4 {
+            width: 200px;
+            height: 150px;
+            background-repeat: no-repeat;
+            background-color: aqua;
+            background-image: url(../img/img3.png);
+            /* 方位名词 right center 和center right 效果是等价的 跟顺序没有关系 */
+            /* background-position: center right; */
+            /* 只指定一个方位名词，比如现在指定x值省略y的值，则第y的值默认居中对齐 */
+            /* background-position: right; */
+            /* 只指定一个方位名词，比如现在指定y值省略x的值，则第x的值默认居中对齐 */
+            background-position: top;
+        }
+    </style>
+    <div class="class4"></div>
+
+    <p>4.2使用精确单位参数</p>
+    <style>
+        .class5 {
+            width: 200px;
+            height: 150px;
+            background-repeat: no-repeat;
+            background-color: aqua;
+            background-image: url(../img/img3.png);
+            /* 如果参数值是精确坐标，那么第一个肯定是x坐标，第二个一定是y坐标 */
+            /* background-position: 20px 50px; */
+            /* 如果只指定一个数值，那该数值一定是x坐标，另一个默认垂直居中 */
+            background-position: 50px;
+        }
+    </style>
+    <div class="class5"></div>
+
+    <p>4.使用混合单位参数</p>
+    <style>
+        .class6 {
+            width: 200px;
+            height: 150px;
+            background-repeat: no-repeat;
+            background-color: aqua;
+            background-image: url(../img/img3.png);
+            /* 如果指定的两个值是精确单位和方位名词混合使用，则第一个值是x坐标，第二个值是y坐标 */
+            background-position: 20px top;
+        }
+    </style>
+    <div class="class6"></div>
+
+    <h1>5.背景图像固定</h1>
+    <p>background-attachment属性设置背景图像是否固定或者随着页面的其余部分滚动</p>
+    <p>background-attachment:scroll\fixed</p>
+    如：
+    <a href="图片滚动与固定.html">图片滚动与固定</a>
+
+    <h1>6.背景复合写法</h1>
+    <p>为了简化背景属性的代码，我们可以讲这些属性合并简写在同一个属性background中</p>
+    <p>简写属性时没有特定的书写顺序，一般习惯约定顺序为：</p>
+    <p>background:背景颜色 背景图片地址 背景平铺 背景图像滚动 背景图片位置</p>
+    如:
+    <a href="背景图片复合写法.html">背景图片复合写法</a>
+
+    <h1>7.背景色半透明</h1>
+    <p>background: rgba(0,0,0,0.3);</p>
+    <p>rgb参数分别代表红绿蓝,最后的a参数代表alpha透明度，取值范围在0~1之间</p>
+    如:
+    <style>
+        .class7 {
+            width: 200px;
+            height: 200px;
+            /* background: rgb(0, 0, 0, 0.3); */
+            background: rgba(0, 0, 0, .3);
+        }
+    </style>
+    <div class="class7">我是沉贯溪</div>
+</body>
+
+</html>

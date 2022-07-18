@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>第三部分</title>
+	<style>
+		p {
+			font-size: 25px;
+			color: red;
+		}
+
+		.blue {
+			color: blue;
+
+		}
+
+		.font {
+			font-size: 25px;
+		}
+
+		.orange {
+			color: orange;
+			font-size: 30px;
+		}
+
+		.most {
+			color: red;
+		}
+
+		.red {
+
+			width: 100px;
+			height: 50px;
+			background-color: red;
+
+		}
+
+		.green {
+
+			width: 100px;
+			height: 50px;
+			background-color: green;
+		}
+
+		.font1 {
+			font-size: 40px;
+		}
+
+		#yellow {
+			color: yellow;
+		}
+
+		/*6.1字体系列*/
+		#font2 {
+			font-family: '微软雅黑', '宋体';
+			color: blue;
+		}
+
+		.body {
+			font-family: "微软雅黑";
+			font-size: 16px;
+		}
+
+		/*6.2字体大小*/
+		.size {
+			font-size: 16px;
+		}
+
+		/*6.3字体粗细*/
+		.bold {
+			/*font-weight: bold;*/
+			/*和bold等效，表示加粗或者变细*/
+			font-weight: 700;
+		}
+
+		.nobold {
+			font-weight: 400;
+			/*等价*/
+			/*font-weight: normal;*/
+		}
+
+		/*6.4文字样式*/
+		.italic {
+			font-style: italic;
+		}
+
+		.normal {
+			font-style: normal;
+		}
+
+		/*字体复合属性*/
+		.test {
+			/*固定顺序
+				font: font-style font-weight font-size/line-height font-family;*/
+			font: italic 700 16px "微软雅黑";
+		}
+
+		/*7.1文本颜色*/
+		.tcolor {
+			/*color: blue;*/
+			/*color: #0000FF;*/
+			color: rgb(255, 0, 0);
+		}
+
+		/*7.2对齐文本*/
+		.center {
+			text-align: center;
+		}
+
+		.right {
+			text-align: right;
+		}
+
+		.left {
+			text-align: left;
+		}
+
+		/*7.3装饰文本*/
+		.none {
+			text-decoration: none;
+		}
+
+		.underline {
+			text-decoration: underline;
+		}
+
+		.overline {
+			text-decoration: overline;
+		}
+
+		.line-through {
+			text-decoration: line-through;
+		}
+
+		.url {
+			text-decoration: none;
+			color: black;
+		}
+
+		/*7.4文本缩进*/
+		p {
+			/*text-indent: 40px;*/
+			/*如果此时写了2em 则是缩进当前元素2个文字大小的距离*/
+			text-indent: 2em;
+		}
+
+		/*7.5行间距*/
+		div {
+			text-indent: 2em;
+			line-height: 26px;
+			font-size: 16px;
+		}
+	</style>
+
+	<!--3.外部样式表(链接式)-->
+	<link rel="stylesheet" href="外部样式表.css" />
+</head>
+
+<body class="body">
+	<h1>1.CSS介绍</h1><br />
+	<strong>CSS一般是放在head部分，这样CSS就和body部分分开了</strong><br />
+
+	<h1>2.标签选择器</h1>
+	<strong>CSS在head部分是style标签，然后style由选择器(标签名字)+花括号组成，其中花括号里写入键值对(什么属性以及属性值)</strong><br />
+	<strong>属性值之间用冒号分隔，每个属性值最后用分号结尾</strong><br />
+	如：<p>我是CSS测试用例1</p>
+
+	<h1>3.类选择器</h1>
+	<strong>单独修改某一个或几个标签名字一样的标签，可以用类选择器</strong><br />
+	<strong class="most">类选择器口诀：样式点定义 结构类(class)调用 一个或多个 开发最常用</strong><br />
+	如：<ul class="orange">
+		<li class="blue">呐喊</li>
+		<li class="font">野草</li>
+		<li class="blue">鬼吹灯</li>
+		<li class="font">盗墓笔记</li>
+	</ul>
+
+	<h4>小案例</h4>
+	<div class="red">红色</div>
+	<div class="green">绿色</div>
+	<div class="red">红色</div>
+
+	<h4>3.1多类名</h4>
+	<strong>多个类名，类名间用空格分开</strong><br />
+	<p>会同时拥有两个类的属性</p>
+	如：<p class="blue font1">我是沉贯溪</p>
+
+	<h1>4.id选择器</h1>
+	<strong>元素以id属性来设置id选择器，CSS中id选择器以"#"来定义</strong><br />
+	<strong class="most">id选择器的口诀：样式#定义，结构id调用，只能调用一次，别人切勿调用</strong><br />
+	如：<p id="yellow">我是沉贯溪</p>
+
+	<h1>5.通配符选择器</h1>
+	<strong>通配符选择器使用"*"定义，它表示选取页面中所有元素(标签)</strong><br />
+	<strong>*把全部标签都改成了指定的颜色，但前提是没有指定的标签才生效，否则一样是按照原本class或id标签的指定生效</strong><br />
+	如：<a href="通配符选择器样例.html">通配符选择器样例</a>
+
+	<!-- 分隔------------------------------------------------------------------------------------------------------------------ -->
+	<hr>
+	<h1>6.CSS字体属性</h1>
+	<strong>fonts属性用于定义字体系列、大小、粗细、和文字样式(如斜体)</strong><br />
+
+	<h4>6.1字体系列</h4>
+	<strong>CSS使用font-family属性定义文本的字体系列</strong><br />
+	<strong>后面可以接多个字体，如果系统没有第一个字体，就会检索下一个字体，以此类推</strong><br />
+	如：
+	<p id="font2">我是沉贯溪</p>
+
+	<h4>6.2字体大小</h4>
+	<strong>CSS使用font-size属性定义字体大小</strong><br />
+	<strong>px(像素)大小是常用的单位</strong><br />
+	<strong>标题标签比较特殊需要单独指定大小</strong>
+	如：
+	<h1 class="size">我是测试用例</h1>
+
+	<h4>6.3字体粗细</h4>
+	<strong>CSS使用font-weight属性设置文字字体的粗细</strong><br />
+	<strong>不加粗就用font-weight=400或者normal</strong><br />
+	如：
+	<h4 class="nobold">我是不加粗</h4>
+	<a class="bold">我是字体加粗</a><br />
+
+	<h4>6.4文字样式</h4>
+	<strong>CSS使用font-style属性设置文本的风格</strong><br />
+	如：
+	<a class="italic">我是斜体文本风格</a><br />
+	<!--让倾斜的字体变正常-->
+	<em class="normal">我原本是倾斜字体，现在正常了</em>
+
+	<h4>字体复合属性</h4>
+	<strong>字体属性可以把以上文字样式综合来写</strong><br />
+	<strong>1.顺序固定，不能更换顺序(样式、粗细、大小、字体)，各属性空格隔开</strong><br />
+	<strong>2.不需要设置的属性可以省略，但必须保留font-size和font-family属性，否则font属性将不起作用</strong><br />
+	如：
+	<i class="test">我是字体复合属性用例</i>
+
+	<!-- 分隔------------------------------------------------------------------------------------------------------------------ -->
+	<hr>
+	<h1>7.CSS文本属性</h1>
+	<strong>CSS文本属性可以定义文本的外观，比如文本的颜色、对齐文本、装饰文本、文本缩进、行间距等。</strong><br />
+	<h4>7.1文本颜色</h4><br />
+	<strong>color属性用于定义文本的颜色</strong><br />
+	如：
+	<div class="tcolor">
+		我是文本颜色
+	</div>
+
+	<h4>7.2对齐文本</h>
+		<strong>text-align属性用于设置元素内文本内容的水平对齐方式</strong><br />
+		<strong>默认是左对齐</strong><br />
+		如：
+		<ul>
+			<li class="center">我是居中对齐</li>
+			<li class="right">我是右对齐</li>
+			<li class="left">我是左对齐</li>
+		</ul>
+
+		<h4>7.3装饰文本</h4>
+		<strong>text-decoration属性规定添加到文本的装饰。可以给文本添加下划线、删除线、上划线等。</strong><br />
+		<strong>取消a标签网址的默认下划线或者颜色</strong><br />
+		<strong>主要要知道如何添加和删除下划线</strong><br />
+		如：
+		<ul>
+			<li class="none">我是默认的，没有装饰线</li>
+			<li class="underline">下划线(常用)</li>
+			<li class="overline">上划线(几乎不用)</li>
+			<li class="line-through">删除线(不常用)</li>
+		</ul>
+		<a href="http://www.baidu.com" class="url">我是网址文字链接，但没下划线，而且颜色也自定义了</a>
+
+		<h4>7.4文本缩进</h4>
+		<strong>text-indent属性用来指定文本的第一行的缩进，通常是讲段落的首行缩进</strong>
+		<strong>em是一个相对单位，就是当前元素(font-size)1个文字的大小</strong>
+		如：
+		<p>我爱我家，我爱祖国，大家好，我是沉贯溪</p>
+		<p>人如其名</p>
+
+		<h1>7.5行间距</h1>
+		<strong>line-height属性用于设置行间的距离(行高)。可以控制文字行与行之间的距离</strong><br />
+		<div>
+			我爱我家，我爱祖国，大家好，我是沉贯溪
+		</div>
+		<div>人如其名</div>
+
+		<h1>8.CSS的引入方式</h1>
+		<h4>8.1CSS的三种样式表</h4>
+		<strong>按照CSS样式书写的位置，CSS样式表可以分为三大类</strong>
+		<h5>1.行内样式表(行内式)</h5>
+		<strong>适合修改简单样式</strong><br />
+		如：
+		<p style="color: blue;">我是行内样式表测试</p>
+
+		<h5>2.内部样式表(嵌入式)</h5>
+		<strong>上面的CSS都是属于嵌入式</strong><br />
+		<strong>内部样式表是写到html页面内部，将所有CSS代码抽取出来，单独放到一个style标签中</strong><br />
+		<strong>style标签理论上可以放在html文档的任何地方，但一般会放在文档的头部head标签</strong><br />
+
+		<h5>3.外部样式表(链接式)</h5>
+		<strong>样式单独写到CSS文件中，之后把CSS文件引入到html页面中使用</strong><br />
+		<strong>两步走：1.建一个css的文件，把所有css代码放里面<br />
+			2.在html页面中，使用link标签引入文件</strong><br>
+		<h8 class="waibu">我是外部样式表的测试用例</h8>
+</body>
+
+</html>

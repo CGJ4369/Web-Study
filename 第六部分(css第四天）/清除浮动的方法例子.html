@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>清除浮动</title>
+    <style>
+        .box {
+            width: 250px;
+            border: 1px solid blue;
+            margin: 0 auto;
+            /* 第二种方法 */
+            /* overflow: hidden; */
+        }
+
+        .first {
+            float: left;
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+        }
+
+        .secone {
+            float: left;
+            width: 100px;
+            height: 100px;
+            background-color: purple;
+        }
+
+        .last {
+
+            height: 100px;
+            background-color: orange;
+        }
+
+        /* 第一种方法 */
+        /* .empty {
+            clear: both;
+        } */
+
+        /* 第二种方法 */
+        /* 在父级元素加overflow */
+
+        /* 第三种方法 */
+        /* 加入after伪元素高级的方法*/
+        /* .clear:after {
+            content: "";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+
+        .clear { */
+        /*大IE6、7专有*/
+        /* *zoom: 1;
+        } */
+
+        /* 第四种方法 */
+        .clear:before,
+        .clear:after {
+            content: "";
+            display: table;
+        }
+
+        .clear:after {
+            clear: both;
+        }
+
+        .clear {
+            *zoom: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box clear">
+        <div class="first">我是第一块</div>
+        <div class="secone">我是第二块</div>
+        <!-- 第一种清除浮动方法 -->
+        <!-- <div class="empty"></div> -->
+
+        <!-- 第二种清除浮动方法 -->
+        <!-- <div class="empty"></div> -->
+    </div>
+    <div class="last">我是沉贯溪</div>
+</body>
+
+</html>

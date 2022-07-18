@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮动例子</title>
+    <style>
+        .f1,
+        .tw,
+        .th {
+            width: 50px;
+            height: 50px;
+            background-color: aqua;
+            float: left;
+        }
+
+        body .tw {
+
+            background-color: orange;
+            float: left;
+        }
+
+        .th {
+            background-color: blue;
+            float: left;
+        }
+
+        span {
+            width: 50px;
+            height: 50px;
+            background-color: aqua;
+            float: left;
+        }
+
+        div {
+            width: 50px;
+            height: 50px;
+            background-color: brown;
+            float: left;
+        }
+
+        p {
+            height: 100px;
+            background-color: blueviolet;
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 2.2浮动的元素会一行内显示并且元素顶部对齐 -->
+    <div class="f1">1</div>
+    <div class="tw">2</div>
+    <div class="th">3</div>
+
+    <!-- 3.3浮动的元素会具有行内块元素的特性 -->
+    <span>span</span>
+    <span>span</span>
+    <div>div</div>
+    <p>我是沉贯溪</p>
+</body>
+
+</html>

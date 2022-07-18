@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>常见的网页布局形式</title>
+
+</head>
+
+<body>
+    <h2>1.先用标准流的父元素排列上下位置,之后内部子元素采取浮动排列左右位置</h2>
+    <h2>2.一个元素浮动了，理论上其余的兄弟元素也要浮动。</h2>
+    <p>注意:浮动的盒子只会影响浮动盒子后面的标准流不会影响前面的标准流.</p>
+
+    <hr>
+    <h2>1.清除浮动</h2>
+    <h3>1.1清楚浮动原因</h3>
+    <p>清除浮动的本质是：清除浮动的本质是清除浮动元素脱离标准流造成的影响</p>
+
+    <p>1.1.1由于父级盒子很多情况下，不方便给高度，但是子盒子又不占有位置，最后父级盒子高度为0时，就会影响下面的标准流盒子。
+    </p>
+    <p>1.1.2由于浮动元素不再占用原文档流的位置，所以它会对后面的元素排版产生影响
+    </p>
+    <p>1.1.3如果父盒子本身有高度，则不需要清除浮动</p>
+    <p>1.1.4清除浮动之后，
+    <p style="color: red;">父级就会根据浮动的子盒子自动检测高度。</p>父级有了高度，就不会影响下面的标准流了</p>
+
+    <h2 style="color: red;">简单来说：要清除浮动需满足1.父级没有高度，2.子盒子浮动，3.影响下面布局</h2>
+
+    <h3>1.2清除浮动的方法</h3>
+    <h4>1．额外标签法也称为隔墙法，是W3C推荐的做法。<p style="color:red;">了解即可</p>
+    </h4>
+    <p>clear有left和right以及both三种对应清理写法，常用的是both</p>
+
+    <h2 style="color:red">以下三种都是给父亲添加样式</h2>
+    <p>额外标签法会在浮动元素末尾添加一个空的标签。例如
+    <div style=" clear:both"></div>，或者其他标签(如<br />等)。</p>
+    <p>优点∶通俗易懂，书写方便</p>
+    <p> 缺点︰添加许多无意义的标签，结构化较差</p>
+    <p style="color: red;">注意：新添加的盒子要求必须是块级元素</p>
+
+    <h4>2．父级添加overflow属性</h4>
+    <p>可以给父级添加overflow属性，将其属性值设置为hidden、auto或scroll</p>
+    <p style="color: red;">注意:是给父元素添加代码</p>
+
+    <h4 style="color: red;">3．父级添加after伪元素(高级的清除方法)</h4>
+    <p>after伪元素会在盒子后面新增个空盒子，然后后面就相当于隔墙法，不同的是after伪元素是在CSS上新增的盒子</p>
+    <p>代码：
+        .clearfix:after {content : "";display: block;height: 0;
+        clear: both;
+        visibility: hidden;
+        }
+
+    <p style="color: red;">因为IE6、7浏览器不支持after和before这种为元素，所以要设置个*zoom:1来兼容</p>
+    .clearfix {
+    *zoom: 1;
+    }
+    </p>
+    <p>目前直接调用代码就行</p>
+    <p>注意，clearfix要加在父元素上</p>
+    <p>优点:没有增加标签，结构更简单</p>
+    <p>缺点∶照顾低版本浏览器</p>
+
+    <h4 style="color: red;">4．父级添加双伪元素(高级的清除方法)</h4>
+    <p>
+        .clearfix:before,
+        .clearfix:after {
+        content : "";
+        display:table;
+        }
+        .clearfix:after {
+        clear:both;
+        }
+        .clearfix {
+        *zoom: 1;
+        }
+    </p>
+    <p>优点:代码更简洁</p>
+    <p>缺点∶照顾低版本浏览器</p>
+
+
+    <h1>例子：<a href="清除浮动的方法例子.html">清除浮动的方法例子</a></h1>
+</body>
+
+</html>
