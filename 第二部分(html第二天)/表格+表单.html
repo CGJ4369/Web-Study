@@ -1,182 +1,193 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<title>第二部分学习</title>
-	</head>
-	<body>
-		<h4>1.表格标签</h4>
-			属性要写到表格的标签table中
-			&lttable&gt&lt/table&gt是定义表格的标签<br />
-			&lttr&gt&lt/tr&gt是定义表格中的<stong>行</stong>，必须嵌套在&lttable&gt标签中<br />
-			&ltth&gt&lt/th&gt是定义表格中的表头单元格，会加粗居中显示，必须嵌套在&lttr&gt&lt/tr&gt
-			&lttd&gt&lt/td&gt是定义表格中的单元格，必须嵌套在&lttr&gt&lt/tr&gt必须嵌套在&lttr&gt&lt/tr&gt<br />
-				<strong>(1)align是让整个表格居中显示</strong><br />
-				<strong>(2)border是为表格添加边框</strong><br />
-				<strong>(3)cellpadding是表格的内容和边框的距离</strong><br />
-				<strong>(4)cellspacing是表格的边框和边框的距离</strong><br />
-				<strong>(5)width、height分别是表格的宽度和高度</strong><br />
-				<strong>(6)&ltthead&gt用于定义表格头部，内部必须要有&lttr&gt标签</tr></strong><br />
-				<strong>(7)&lttbody&gt用于定义表格主体，主要放数据本体</tr></strong><br />
-			如：<table align="center" border="2" cellpadding="1" cellspacing="0" width="200" height="200">
-				<thead>
-				<tr>
-					<th>基金名字</th> <th>基金类型</th> <th>基金经理</th>
-				</tr>
-				</thead>
-				<tbody>
-				<tr>
-					<td>中欧医疗</td> <td>混合型</td>  <td>葛兰</td>
-				</tr>
-				<tr>	
-					<td>中国基建</td> <td>指数型</td> <td>王力宏</td>
-				</tr>
-				</tbody>
-				</table>
-			<h4>合并单元格</h4>
-			<strong>跨行合并：rowspan="合并单元格的个数"</strong><br />
-			<strong>跨列合并：colspan="合并单元格的个数"</strong><br />
-			如：<table border="2">
-				<thead>
-					<th>我的</th>
-					<th colspan="2">个人简历</th>
-					
-					
-				</thead>
-				<tbody>
-					<tr>
-						<td>114514</td>
-						<td>114514</td>
-						<td>114514</td>
-					</tr>
-					<tr>
-						<td rowspan="2">114514</td>
-						<td>114514</td>
-						<td>114514</td>
-					</tr>
-					<tr>
-						
-						<td>114514</td>
-						<td>114514</td>
-					</tr>
-					
-					
-				</tbody>
-			</table>
-		<h4>2.列表标签</h4>
-		<h5><strong>(1)无序列表</strong></h5>
-		<p><strong>&lt;ul&gt;标签表示html页面中的项目的无序列表，一般会以项目符号呈现列表项<br/>
-		而列表项使用&lt;li&gt;标签定义</strong><br /></p>
-		
-		<strong>&lt;ul&gt;中只能嵌套&lt;li&gt;，直接在&lt;ul&gt;中输入其他标签或者文字都是不被允许的</strong><br />
-		<strong>&lt;li&gt;相当于一个容器可以放任何东西</strong>
-		如：
-		<ul>
-			最热网文
-			<li>大奉打更人</li>
-			<li>斗破苍穹</li>
-			<li>斗罗大陆</li>
-		</ul>
-		
-		<h5><strong>(2)有序列表</strong></h5>
-		<p><strong>&lt;ol&gt;标签用于定义有序列表，列表排序以数字来显示<br/>
-		而列表项使用&lt;li&gt;标签定义</strong><br /></p>
-		
-		<strong>&lt;ol&gt;中只能嵌套&lt;li&gt;，直接在&lt;ul&gt;中输入其他标签或者文字都是不被允许的</strong><br />
-		<strong>&lt;li&gt;相当于一个容器可以放任何东西</strong><br />
-		<strong>有序列表会带有自己样式的属性，但在实际使用中，用css来设置</strong><br />
-		如：
-		<ol>
-			最热网文
-			<li>大奉打更人</li>
-			<li>斗破苍穹</li>
-			<li>斗罗大陆</li>
-		</ol>
-		
-		<h5><strong>(2)有序列表</strong></h5>
-		<p><strong>&lt;dl&gt;标签用于定义描述列表<br/>
-		该标签会与&lt;dt&gt;&lt;dd&gt;一起使用</strong><br /></p>
-		
-		<strong>&lt;dl&gt;中只能有&lt;dt&gt;和&lt;dd&gt;<br/>
-			而&lt;dt&gt;&lt;dd&gt;可以放任何标签
-			&lt;dt&gt;&lt;dd&gt;个数没有限制，通常是一个&lt;dt&gt;对应多个&lt;dd&gt;<br />
-			</strong><br />
 
-		<strong>有序列表会带有自己样式的属性，但在实际使用中，用css来设置</strong><br />
-		如：
-		<dl>
-			<dt>关注我们</dt>
-			<dd>新浪微博</dd>
-			<dd>官方微信</dd>
-			<dd>哔哩哔哩</dd>
-		</dl>
-		
-		<h4>3.表单域</h4>
-		<h5>(1)表单域介绍</h5>
-		<strong>&lt;form&gt;标签用于定义表单域，以实现用户信息的收集和传递</strong><br />
-		<strong>&lt;form&gt;会把它范围内的表单元素信息提交给服务器</strong><br />
-		<strong>from标签有三个属性值分别是action、method、name</strong><br />
-		<strong>action对应url地址，用于指定接收并处理表单数据的服务器程序的url地址</strong><br />
-		<strong>method对应get/post，用于设置表单数据的提交方式，其取值为get/post</strong><br />
-		<strong>name对应名称，用于指定表单的名称，以区分同一个页面的多个表单域</strong><br />
-		如：<form action="demo.php" method="post" name="name1">
-			表单元素
-		</form>
-		
-		<form>
+<head>
+	<meta charset="UTF-8">
+	<title>第二部分学习</title>
+</head>
+
+<body>
+	<h4>1.表格标签</h4>
+	属性要写到表格的标签table中
+	&lttable&gt&lt/table&gt是定义表格的标签<br />
+	&lttr&gt&lt/tr&gt是定义表格中的<stong>行</stong>，必须嵌套在&lttable&gt标签中<br />
+	&ltth&gt&lt/th&gt是定义表格中的表头单元格，会加粗居中显示，必须嵌套在&lttr&gt&lt/tr&gt
+	&lttd&gt&lt/td&gt是定义表格中的单元格，必须嵌套在&lttr&gt&lt/tr&gt必须嵌套在&lttr&gt&lt/tr&gt<br />
+	<strong>(1)align是让整个表格居中显示</strong><br />
+	<strong>(2)border是为表格添加边框</strong><br />
+	<strong>(3)cellpadding是表格的内容和边框的距离</strong><br />
+	<strong>(4)cellspacing是表格的边框和边框的距离</strong><br />
+	<strong>(5)width、height分别是表格的宽度和高度</strong><br />
+	<strong>(6)&ltthead&gt用于定义表格头部，内部必须要有&lttr&gt标签</tr></strong><br />
+	<strong>(7)&lttbody&gt用于定义表格主体，主要放数据本体</tr></strong><br />
+	如：<table align="center" border="2" cellpadding="1" cellspacing="0" width="200" height="200">
+		<thead>
+			<tr>
+				<th>基金名字</th>
+				<th>基金类型</th>
+				<th>基金经理</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>中欧医疗</td>
+				<td>混合型</td>
+				<td>葛兰</td>
+			</tr>
+			<tr>
+				<td>中国基建</td>
+				<td>指数型</td>
+				<td>王力宏</td>
+			</tr>
+		</tbody>
+	</table>
+	<h4>合并单元格</h4>
+	<strong>跨行合并：rowspan="合并单元格的个数"</strong><br />
+	<strong>跨列合并：colspan="合并单元格的个数"</strong><br />
+	如：<table border="2">
+		<thead>
+			<th>我的</th>
+			<th colspan="2">个人简历</th>
+
+
+		</thead>
+		<tbody>
+			<tr>
+				<td>114514</td>
+				<td>114514</td>
+				<td>114514</td>
+			</tr>
+			<tr>
+				<td rowspan="2">114514</td>
+				<td>114514</td>
+				<td>114514</td>
+			</tr>
+			<tr>
+
+				<td>114514</td>
+				<td>114514</td>
+			</tr>
+
+
+		</tbody>
+	</table>
+	<h4>2.列表标签</h4>
+	<h5><strong>(1)无序列表</strong></h5>
+	<p><strong>&lt;ul&gt;标签表示html页面中的项目的无序列表，一般会以项目符号呈现列表项<br />
+			而列表项使用&lt;li&gt;标签定义</strong><br /></p>
+
+	<strong>&lt;ul&gt;中只能嵌套&lt;li&gt;，直接在&lt;ul&gt;中输入其他标签或者文字都是不被允许的</strong><br />
+	<strong>&lt;li&gt;相当于一个容器可以放任何东西</strong>
+	如：
+	<ul>
+		最热网文
+		<li>大奉打更人</li>
+		<li>斗破苍穹</li>
+		<li>斗罗大陆</li>
+	</ul>
+
+	<h5><strong>(2)有序列表</strong></h5>
+	<p><strong>&lt;ol&gt;标签用于定义有序列表，列表排序以数字来显示<br />
+			而列表项使用&lt;li&gt;标签定义</strong><br /></p>
+
+	<strong>&lt;ol&gt;中只能嵌套&lt;li&gt;，直接在&lt;ul&gt;中输入其他标签或者文字都是不被允许的</strong><br />
+	<strong>&lt;li&gt;相当于一个容器可以放任何东西</strong><br />
+	<strong>有序列表会带有自己样式的属性，但在实际使用中，用css来设置</strong><br />
+	如：
+	<ol>
+		最热网文
+		<li>大奉打更人</li>
+		<li>斗破苍穹</li>
+		<li>斗罗大陆</li>
+	</ol>
+
+	<h5><strong>(2)有序列表</strong></h5>
+	<p><strong>&lt;dl&gt;标签用于定义描述列表<br />
+			该标签会与&lt;dt&gt;&lt;dd&gt;一起使用</strong><br /></p>
+
+	<strong>&lt;dl&gt;中只能有&lt;dt&gt;和&lt;dd&gt;<br />
+		而&lt;dt&gt;&lt;dd&gt;可以放任何标签
+		&lt;dt&gt;&lt;dd&gt;个数没有限制，通常是一个&lt;dt&gt;对应多个&lt;dd&gt;<br />
+	</strong><br />
+
+	<strong>有序列表会带有自己样式的属性，但在实际使用中，用css来设置</strong><br />
+	如：
+	<dl>
+		<dt>关注我们</dt>
+		<dd>新浪微博</dd>
+		<dd>官方微信</dd>
+		<dd>哔哩哔哩</dd>
+	</dl>
+
+	<h4>3.表单域</h4>
+	<h5>(1)表单域介绍</h5>
+	<strong>&lt;form&gt;标签用于定义表单域，以实现用户信息的收集和传递</strong><br />
+	<strong>&lt;form&gt;会把它范围内的表单元素信息提交给服务器</strong><br />
+	<strong>from标签有三个属性值分别是action、method、name</strong><br />
+	<strong>action对应url地址，用于指定接收并处理表单数据的服务器程序的url地址</strong><br />
+	<strong>method对应get/post，用于设置表单数据的提交方式，其取值为get/post</strong><br />
+	<strong>name对应名称，用于指定表单的名称，以区分同一个页面的多个表单域</strong><br />
+	如：<form action="demo.php" method="post" name="name1">
+		表单元素
+	</form>
+
+	<form>
 		<h5>(2)表单元素</h5>
 		<strong>(2.1)</strong>
 		<strong>input表单元素</strong><br />
 		<strong>input标签在表单元素中是用于收集客户信息</strong><br />
 		<strong>input标签包含一个type属性</strong><br />
 		<strong>属性值有以下：</strong><br />
-			<!--name和value值主要传值到后台给后台人员使用-->
-			<!--text 文本框，用户可以在里面输入任何文字-->
-			<!--maxlength为用户可以输入的最大字符数-->
-			用户名：<input type="text" name="username" value="请输入用户名"/ maxlength="6"><br />
-			<!--password 密码框，用户看不见里面输入的内容-->
-		        密   码：<input type="password" name="password"/><br />
-		    <!--radio 单选按钮，可以实现多选一-->
-		    <!--name是表单元素名字，这里性别单选按钮必须有相同的名字name才可以实现多选一-->
-		    <!--单选按钮和复选框可以设置checked属性，当页面打开的时候就可以默认选中这个按钮-->    
-		        性   别：男<input type="radio" name="sex" value="男" checked="checked"/>女<input type="radio" name="sex" value="女"/><br />
-		   	<!--checkbox 复选框，可以实现多选-->
-		   	爱   好：吃饭<input type="checkbox" name="hobby" value="吃饭"/ checked="checked">睡觉<input type="checkbox" name="hobby"/>打豆豆<input type="checkbox" name="hobby"/><br />
-		    
-		    <!--点击提交按钮可以吧form表单域里的表单元素的值提交给后台服务器-->
-		    <input type="submit" value="免费注册"/>
-		    <!--重置按钮可以还原表单元素初始的默认状态-->
-		    <input type="reset" value="重新设置"/>
-		    <!--普通按钮 后期结合js搭配使用-->
-		    <input type="button" value="获取短信验证码"/><br />
-		    <!--文件域 上传文件使用的-->
-		       上传头像：<input type="file" /><br />
-		       
-		    <strong>(2.2)</strong>
-		    <strong>label标签,当点击label标签内的文本时，浏览器就会自动将焦点(光标)转到或者选择对应的表单元素上</strong><br />
-		    <strong>label标签的for属性要和id属性相同</strong><br />
-		    <label for="username">用户名：</label>
-		    <input type="text" id="username"/><br />
-		    <label for="sex">男</label>
-		    <input type="radio" name="sex" value="男" checked="checked" id="sex"/>
-		    <label for="sex1">女</label>
-		    <input type="radio" name="sex" value="女" id="sex1"/><br />
-		    
-		    <strong>(2.3)</strong>
-		    <strong>select下拉表单元素</strong><br />
-		    <strong>selec下拉表单标签,至少包含一对option</strong><br />
-		    <strong>在option中定义selected="selected时，当前项即为默认选中项"</strong><br />
-		    籍贯：<select>
-		    	<option>山东</option>
-		    	<option selected="selected">广东</option>
-		    	<option>河北</option>
-		    </select>
-		    
-		    <strong>(2.3)</strong>
-		    <strong>textarea文本域元素</strong>
-		    <strong>textarea标签用于定义多行文本输入的控件，可以输入更多文字，常见于留言板、评论区等</strong><br />
-		    <strong>cols="每行的字符数"，row="显示的行数"，但一般通过css来改变大小</strong><br />
-		    <textarea rows="3" cols="4">这是文本域</textarea>
-		    </form>
-	</body>
+		<!--name和value值主要传值到后台给后台人员使用-->
+		<!--text 文本框，用户可以在里面输入任何文字-->
+		<!--maxlength为用户可以输入的最大字符数-->
+		用户名：<input type="text" name="username" value="请输入用户名" / maxlength="6"><br />
+		<!--password 密码框，用户看不见里面输入的内容-->
+		密 码：<input type="password" name="password" /><br />
+		<!--radio 单选按钮，可以实现多选一-->
+		<!--name是表单元素名字，这里性别单选按钮必须有相同的名字name才可以实现多选一-->
+		<!--单选按钮和复选框可以设置checked属性，当页面打开的时候就可以默认选中这个按钮-->
+		性 别：男<input type="radio" name="sex" value="男" checked="checked" />女<input type="radio" name="sex"
+			value="女" /><br />
+		<!--checkbox 复选框，可以实现多选-->
+		爱 好：吃饭<input type="checkbox" name="hobby" value="吃饭" / checked="checked">睡觉<input type="checkbox"
+			name="hobby" />打豆豆<input type="checkbox" name="hobby" /><br />
+
+		<!--点击提交按钮可以吧form表单域里的表单元素的值提交给后台服务器-->
+		<input type="submit" value="免费注册" />
+		<!--重置按钮可以还原表单元素初始的默认状态-->
+		<input type="reset" value="重新设置" />
+		<!--普通按钮 后期结合js搭配使用-->
+		<input type="button" value="获取短信验证码" /><br />
+		<!--文件域 上传文件使用的-->
+		上传头像：<input type="file" /><br />
+
+		<strong>(2.2)</strong>
+		<strong>label标签,当点击label标签内的文本时，浏览器就会自动将焦点(光标)转到或者选择对应的表单元素上</strong><br />
+		<strong>label标签的for属性要和id属性相同</strong><br />
+		<label for="username">用户名：</label>
+		<input type="text" id="username" /><br />
+		<label for="sex">男</label>
+		<input type="radio" name="sex" value="男" checked="checked" id="sex" />
+		<label for="sex1">女</label>
+		<input type="radio" name="sex" value="女" id="sex1" /><br />
+
+		<strong>(2.3)</strong>
+		<strong>select下拉表单元素</strong><br />
+		<strong>selec下拉表单标签,至少包含一对option</strong><br />
+		<strong>在option中定义selected="selected时，当前项即为默认选中项"</strong><br />
+		籍贯：<select>
+			<option>山东</option>
+			<option selected="selected">广东</option>
+			<option>河北</option>
+		</select>
+
+		<strong>(2.3)</strong>
+		<strong>textarea文本域元素</strong>
+		<strong>textarea标签用于定义多行文本输入的控件，可以输入更多文字，常见于留言板、评论区等</strong><br />
+		<strong>cols="每行的字符数"，row="显示的行数"，但一般通过css来改变大小</strong><br />
+		<textarea rows="3" cols="4">这是文本域</textarea>
+	</form>
+</body>
+
 </html>
