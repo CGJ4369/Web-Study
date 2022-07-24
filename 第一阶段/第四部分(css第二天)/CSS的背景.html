@@ -25,17 +25,17 @@
         }
     </style>
     <div class="class1"></div>
-    <p>一般情况下元素背景颜色默认值是transparent(透明)，我们也可以手动指定背景颜色为其他或者透明色</p>
+    <p>一般情况下元素背景颜色默认值是transparent(透明),我们也可以手动指定背景颜色为其他或者透明色</p>
 
     <h1>2.背景图片</h1>
     background-image属性描述了元素的背景图像。<br>
-    实际开发常见于logo或者一些装饰性的小图片或者是超大的背景图片，优点是非常便于控制位置<br>
+    实际开发常见于logo或者一些装饰性的小图片或者是超大的背景图片,优点是非常便于控制位置<br>
     如：
     <style>
         .class2 {
             width: 200px;
             height: 50px;
-            /* 默认无图片，也就是none */
+            /* 默认无图片,也就是none */
             /* background-image: url(none); */
             background-image: url(../img/img2.png);
         }
@@ -80,9 +80,9 @@
             background-image: url(../img/img3.png);
             /* 方位名词 right center 和center right 效果是等价的 跟顺序没有关系 */
             /* background-position: center right; */
-            /* 只指定一个方位名词，比如现在指定x值省略y的值，则第y的值默认居中对齐 */
+            /* 只指定一个方位名词,比如现在指定x值省略y的值,则第y的值默认居中对齐 */
             /* background-position: right; */
-            /* 只指定一个方位名词，比如现在指定y值省略x的值，则第x的值默认居中对齐 */
+            /* 只指定一个方位名词,比如现在指定y值省略x的值,则第x的值默认居中对齐 */
             background-position: top;
         }
     </style>
@@ -96,9 +96,9 @@
             background-repeat: no-repeat;
             background-color: aqua;
             background-image: url(../img/img3.png);
-            /* 如果参数值是精确坐标，那么第一个肯定是x坐标，第二个一定是y坐标 */
+            /* 如果参数值是精确坐标,那么第一个肯定是x坐标,第二个一定是y坐标 */
             /* background-position: 20px 50px; */
-            /* 如果只指定一个数值，那该数值一定是x坐标，另一个默认垂直居中 */
+            /* 如果只指定一个数值,那该数值一定是x坐标,另一个默认垂直居中 */
             background-position: 50px;
         }
     </style>
@@ -112,7 +112,7 @@
             background-repeat: no-repeat;
             background-color: aqua;
             background-image: url(../img/img3.png);
-            /* 如果指定的两个值是精确单位和方位名词混合使用，则第一个值是x坐标，第二个值是y坐标 */
+            /* 如果指定的两个值是精确单位和方位名词混合使用,则第一个值是x坐标,第二个值是y坐标 */
             background-position: 20px top;
         }
     </style>
@@ -125,15 +125,15 @@
     <a href="图片滚动与固定.html">图片滚动与固定</a>
 
     <h1>6.背景复合写法</h1>
-    <p>为了简化背景属性的代码，我们可以讲这些属性合并简写在同一个属性background中</p>
-    <p>简写属性时没有特定的书写顺序，一般习惯约定顺序为：</p>
+    <p>为了简化背景属性的代码,我们可以讲这些属性合并简写在同一个属性background中</p>
+    <p>简写属性时没有特定的书写顺序,一般习惯约定顺序为：</p>
     <p>background:背景颜色 背景图片地址 背景平铺 背景图像滚动 背景图片位置</p>
     如:
     <a href="背景图片复合写法.html">背景图片复合写法</a>
 
     <h1>7.背景色半透明</h1>
     <p>background: rgba(0,0,0,0.3);</p>
-    <p>rgb参数分别代表红绿蓝,最后的a参数代表alpha透明度，取值范围在0~1之间</p>
+    <p>rgb参数分别代表红绿蓝,最后的a参数代表alpha透明度,取值范围在0~1之间</p>
     如:
     <style>
         .class7 {
