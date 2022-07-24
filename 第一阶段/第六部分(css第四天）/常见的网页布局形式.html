@@ -30,7 +30,7 @@
     <h2 style="color: red;">简单来说：要清除浮动需满足1.父级没有高度,2.子盒子浮动,3.影响下面布局</h2>
 
     <h3>1.2清除浮动的方法</h3>
-    <h4>1．额外标签法也称为隔墙法,是W3C推荐的做法。<p style="color:red;">了解即可</p>
+    <h4>1.额外标签法也称为隔墙法,是W3C推荐的做法。<p style="color:red;">了解即可</p>
     </h4>
     <p>clear有left和right以及both三种对应清理写法,常用的是both</p>
 
@@ -41,11 +41,11 @@
     <p> 缺点︰添加许多无意义的标签,结构化较差</p>
     <p style="color: red;">注意：新添加的盒子要求必须是块级元素</p>
 
-    <h4>2．父级添加overflow属性</h4>
+    <h4>2.父级添加overflow属性</h4>
     <p>可以给父级添加overflow属性,将其属性值设置为hidden、auto或scroll</p>
     <p style="color: red;">注意:是给父元素添加代码</p>
 
-    <h4 style="color: red;">3．父级添加after伪元素(高级的清除方法)</h4>
+    <h4 style="color: red;">3.父级添加after伪元素(高级的清除方法)</h4>
     <p>after伪元素会在盒子后面新增个空盒子,然后后面就相当于隔墙法,不同的是after伪元素是在CSS上新增的盒子</p>
     <p>代码：
         .clearfix:after {content : "";display: block;height: 0;
@@ -63,7 +63,7 @@
     <p>优点:没有增加标签,结构更简单</p>
     <p>缺点∶照顾低版本浏览器</p>
 
-    <h4 style="color: red;">4．父级添加双伪元素(高级的清除方法)</h4>
+    <h4 style="color: red;">4.父级添加双伪元素(高级的清除方法)</h4>
     <p>
         .clearfix:before,
         .clearfix:after {
