@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定位的概念</title>
+    <style>
+        body {
+            font-weight: 700;
+        }
+
+        .red {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>1.定位的概念</h1>
+    <p>定位∶将盒子定在某一个位置,所以定位也是在摆放盒子,按照定位的方式移动盒子。</p>
+    <p class="red">定位=定位模式＋边偏移。</p>
+    <p>定位模式用于指定一个元素在文档中的定位方式。边偏移则决定了该元素的最终位置。</p>
+
+    <h3>1.1定位模式</h3>
+    <p>定位模式决定元素的定位方式,它通过CSS的position属性来设置,其值可以分为四个:</p>
+    <div class="red">
+        <p>值--------------语义 </p>
+        <p>static-------静态定位</p>
+        <p>relative-----相对定位</p>
+        <p>absolute-----绝对定位</p>
+        <p>fixed--------固定定位</p>
+    </div>
+
+    <h3>1.2边偏移</h3>
+    <p>边偏移就是定位的盒子移动到最终位置。有top、bottom、left和right 4个属性。</p>
+    <div class="red">
+        <p>四个偏移属性top、bottom、left、right分别对应父元素上、下、左、右边线的距离</p>
+        <p>比如: top:80px</p>
+    </div>
+
+
+</body>
+
+</html>

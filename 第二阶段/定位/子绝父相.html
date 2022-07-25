@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>子绝父相</title>
+    <style>
+        .red {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>绝对定位和相对定位的使用场景</h1>
+    <p>通俗点讲：子级是绝对定位的话，父级要用相对定位。</p>
+
+    <p>子级绝对定位，不会占有位置，可以放到父盒子里面的任何一个地方，不会影响其他的兄弟盒子</p>
+
+    <p>父盒子需要加定位限制子盒子在父盒子内显示</p>
+
+    <p>因为如果父盒子如果用绝对定位,那就会浮起来，让其他盒子占有它的位置，破坏了布局，</p>
+    <p>所以父盒子布局时，需要占有位置，因此父亲只能是相对定位。</p>
+
+    <p class="red">相对定位经常用来作为绝对定位的父级。</p>
+</body>
+
+</html>

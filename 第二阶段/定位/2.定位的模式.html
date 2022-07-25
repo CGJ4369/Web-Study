@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定位的模式</title>
+    <link rel="stylesheet" href="定位.css">
+</head>
+
+<body>
+    <h2>1.静态定位static(仅做了解)</h2>
+    <p>概念：静态定位是元素的默认定位方式，无定位的意思。</p>
+    <p>语法:选择器{ position : static; }</p>
+    <div>特点：
+        <p>1.1静态定位按照标准流特性摆放位置，它没有边偏移</p>
+        <p>1.2静态定位在布局时很少用到心</p>
+    </div>
+
+    <h2>2.相对定位relative(重要)</h2>
+    <p>概念：相对定位是元素在移动位置的时候，是相对于它原来的位置来说的。</p>
+    <p>语法:选择器选择器{ position: relative; }</p>
+    <div>特点:
+        <p>2.1它是相对于自己原来的位置来移动的(移动位置的时候参照点是自己原来的位置).</p>
+        <p>2.1原来在标准流的位置继续占有,后面的盒子仍然以标准流的方式对待它。(不脱标，继续保留原来位置)</p>
+    </div>
+    举个例子:
+    <div class="rel1"></div>
+    <div class="rel2"></div>
+
+    <h2>3.绝对定位1.5绝对定位absolute(重要)</h2>
+    <p>概念:绝对定位是元素在移动位置的时候，是相对于它祖先元素来说的。</p>
+    <p>语法:选择器选择器{ position: absolute; }</p>
+    <div>特点:
+        <p>3.1如果没有祖先元素或者祖先元素没有定位，则以浏览器为准定位(Document文档)。</p>
+        <p>3.2如果祖先元素有定位(相对、绝对、固定定位），
+            <strong class="color">则以最近一级的有定位祖先元素为参考点移动位置。</strong>
+        </p>
+        <p>3.3绝对定位不在占有原先的位置</p>
+    </div>
+    举个例子:
+    <a href="绝对定位举例.html">我是例子</a>
+
+</body>
+
+</html>

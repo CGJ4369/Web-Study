@@ -1,0 +1,73 @@
+body {
+    font-weight: 700;
+}
+
+div {
+    color: red;
+}
+
+.color {
+    color: rgb(13, 0, 255);
+}
+
+/* 相对定位 */
+.rel1 {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: 20px;
+    right: 50px;
+    background-color: skyblue;
+}
+
+.rel2 {
+    width: 100px;
+    height: 100px;
+    background-color: #114514;
+}
+
+/* 绝对定位 */
+/* 1.没有父亲 */
+.son1 {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 20px;
+    left: 300px;
+    background-color: aqua;
+}
+
+/* 2.有父亲,但父亲没有定位 */
+.son2 {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 175px;
+    right: 154px;
+    background-color: blue;
+}
+
+.dad {
+    width: 200px;
+    height: 200px;
+    background-color: orange;
+}
+
+/* 3.有父亲，而且父亲有定位 */
+.son3 {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: 80px;
+    left: 80px;
+    background-color: rgb(255, 0, 251);
+}
+
+.dad1 {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    top: 50px;
+    left: 80px;
+    background-color: rgb(255, 0, 111);
+}
