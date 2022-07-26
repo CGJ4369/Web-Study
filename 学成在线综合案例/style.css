@@ -1,0 +1,440 @@
+   * {
+       margin: 0;
+       padding: 0;
+   }
+
+   /* 版心 */
+   .w {
+       width: 1200px;
+       margin: auto;
+   }
+
+   body {
+       background-color: #f3f5f7;
+       height: 300px;
+   }
+
+   li {
+       list-style: none;
+
+   }
+
+   a {
+       text-decoration: none;
+   }
+
+   .clearfix:before,
+   .clearfix:after {
+       content: " ";
+       display: table;
+   }
+
+   .clearfix:after {
+       clear: both;
+   }
+
+   .clearfix {
+       *zoom: 1;
+   }
+
+   /* 头部 */
+   .head {
+       height: 42px;
+       margin: 30px auto;
+   }
+
+   .logo {
+       float: left;
+       width: 198px;
+       height: 42px;
+
+   }
+
+   .nav {
+       float: left;
+       margin-left: 60px;
+   }
+
+   .nav ul li {
+       float: left;
+       margin: 0 15px;
+   }
+
+   .nav ul li a {
+       display: block;
+       height: 42px;
+       padding: 0 10px;
+       line-height: 42px;
+       color: #050505;
+
+   }
+
+   .nav ul li a:hover {
+       color: #00a4ff;
+       border-bottom: 2px solid #00a4ff;
+   }
+
+   /* 搜索模块 */
+   .search {
+       float: left;
+       width: 412px;
+       height: 42px;
+       margin-left: 70px;
+   }
+
+   .search input {
+       float: left;
+       width: 345px;
+       height: 40px;
+       border: 1px solid #00a4ff;
+       border-right: none;
+       color: #bfbfbf;
+       font-size: 14px;
+       padding-left: 15px;
+   }
+
+   .search button {
+       float: left;
+       width: 50px;
+       height: 42px;
+       background-image: url("../学成在线/img/btn.png");
+       /* button有个默认的边框 */
+       border: 0;
+   }
+
+   .user {
+       float: right;
+       line-height: 42px;
+       margin-right: 30px;
+       font-size: 14px #666;
+   }
+
+   /* 广告模块 */
+   .banner {
+       height: 421px;
+       background-color: #1c036c;
+   }
+
+   .banner .w {
+       height: 421px;
+       background: url("../学成在线/img/banner2_20190819_210028.png") no-repeat top center;
+   }
+
+   .selnav {
+       float: left;
+       width: 190px;
+       height: 421px;
+       background-color: rgba(0, 0, 0, .3);
+   }
+
+   .selnav ul li a {
+       color: #fff;
+       font-size: 14px;
+   }
+
+   .selnav ul li {
+       height: 45px;
+       line-height: 45px;
+       padding: 0 20px;
+   }
+
+   .selnav ul li a span {
+       height: 45px;
+       line-height: 45px;
+       float: right;
+   }
+
+   .selnav ul li a:hover {
+       color: skyblue;
+   }
+
+   .course {
+       width: 230px;
+       height: 300px;
+       float: right;
+       background-color: #fff;
+       /* 浮动的盒子不会有外边距合并问题 */
+       margin-top: 50px;
+   }
+
+   .course h2 {
+       height: 42px;
+       background-color: #9bceea;
+       font-size: 18px;
+       line-height: 42px;
+       text-align: center;
+       color: #ffffff;
+   }
+
+   .bd {
+       padding: 0 20px;
+
+
+   }
+
+   .bd ul li {
+       padding: 14px 0;
+       border-bottom: 1px solid #ccc;
+   }
+
+   .bd ul li h4 {
+       font-size: 16px;
+       color: #4e4e4e;
+   }
+
+   .bd ul li p {
+       font-size: 12px;
+       color: #a5a5a5;
+   }
+
+   .bd .more {
+       display: block;
+       height: 38px;
+       border: 1px solid #22b0ff;
+       margin-top: 5px;
+       text-align: center;
+       line-height: 38px;
+       color: #00a4ff;
+       font-size: 16px;
+       font-weight: 700;
+   }
+
+   /* 精品推荐兴趣模块 */
+   .goods {
+       height: 60px;
+       background-color: #fff;
+       margin-top: 10px;
+       box-shadow: 0 2px 3px 3px rgba(0, 0, 0, .1);
+       /* 行高会继承 会继承给孩子*/
+       line-height: 60px;
+   }
+
+   .goods h3 {
+       float: left;
+       padding-left: 30px;
+       font-size: 16px;
+       padding-right: 30px;
+       color: #00a4ff;
+   }
+
+   .goods ul li {
+       float: left;
+   }
+
+   .goods ul li a {
+       padding: 0 30px;
+       font-size: 14px;
+       color: #050505;
+       border-left: 1px solid #00a4ff;
+   }
+
+   .goods .mod {
+       float: right;
+       font-size: 14px;
+       color: #00a4ff;
+       margin-right: 30px;
+   }
+
+   /* 精品推荐模块 */
+   .recommen {
+       margin-top: 30px;
+       background-color: #f3f5f7;
+   }
+
+   .recommen .jinnav {
+       height: 45px;
+   }
+
+   .jinnav h4 {
+       float: left;
+       font-size: 20px;
+       color: #494949;
+   }
+
+   .jinnav a {
+       float: right;
+       font-size: 12px;
+       color: #a5a5a5;
+       margin-top: 10px;
+       margin-right: 15px;
+   }
+
+
+   .content ul li {
+       position: relative;
+       float: left;
+       width: 228px;
+       height: 270px;
+       margin-right: 15px;
+       margin-bottom: 14px;
+
+   }
+
+   /* 第一种方法 */
+   /* .recommen .content .last1 {
+       margin-right: 0;
+   }
+
+   .recommen .content .last2 {
+       margin-right: 0;
+   } */
+
+   /* 第二种方法 */
+   /* 让ul的宽度能宽到装下一行的五个li */
+   .content ul {
+       width: 1225px;
+   }
+
+   .content ul>li img {
+       width: 100%;
+   }
+
+   .content ul li em {
+       position: absolute;
+       top: 4px;
+       right: -4px;
+   }
+
+   .content ul li {
+       background-color: #ffffff;
+   }
+
+   .content ul li p {
+       font-size: 14px;
+       color: #050505;
+       margin: 20px 20px 20px 25px;
+   }
+
+   .content ul li h4 {
+       font-size: 12px;
+       margin: 0 20px 0 25px;
+       font-weight: 400;
+       color: #999999;
+   }
+
+   .content ul li span {
+       color: #ff7c2d;
+   }
+
+   /* 编程推荐模块 */
+   .biancheng {
+       margin-top: 36px;
+
+   }
+
+   .biancheng .jinnav {
+       height: 45px;
+   }
+
+   .biancheng .jinnav ul {
+       margin: 0 353px 0 353px;
+   }
+
+   .biancheng .jinnav ul li {
+       float: left;
+       margin-left: 70px;
+   }
+
+   .biancheng .jinnav ul li a {
+       font-size: 16px;
+       color: #868686;
+   }
+
+   .biancheng .jinnav ul li a:hover {
+       color: #00a4ff;
+   }
+
+   .bc-body {
+       margin-top: 5px;
+   }
+
+   .bc-body ul li {
+       float: left;
+
+   }
+
+
+   .bc-body ul .left img {
+       width: 100%;
+   }
+
+
+
+   .bc-body ul .right .down {
+       margin-top: 24px;
+   }
+
+   .bc-body ul .right .down div {
+       float: left;
+       width: 229px;
+       height: 269px;
+       margin-right: 15px;
+   }
+
+   .bc-body ul .right .down .last2 {
+       margin-right: 0;
+   }
+
+   .bc-body ul .right .down img {
+       width: 100%;
+   }
+
+   /* 尾部模块 */
+   .foot {
+       height: 415px;
+       margin-top: 40px;
+       background-color: #ffffff;
+   }
+
+   .foot .end {
+       /* 里面的盒子想和外面的盒子有个顶部距离,用margin-top会外边距合并,因此用padding就可以了 */
+       padding-top: 34px;
+   }
+
+   .foot .end .left {
+       float: left;
+
+   }
+
+   .foot .end .left p {
+       font-size: 12px;
+       color: #666;
+       margin: 27px 0 15px 0;
+   }
+
+   /* a标签属于行内元素，没大小 装换为块元素*/
+   .foot .end .left a {
+       display: block;
+       width: 116px;
+       height: 34px;
+       font-size: 16px;
+       line-height: 34px;
+       text-align: center;
+       color: #00a4ff;
+       border: 2px solid #00a4ff;
+   }
+
+   .foot .end .right {
+       float: right;
+   }
+
+   .foot .end .right dl {
+       float: left;
+       margin-left: 100px;
+   }
+
+   .foot .end .right dl dt {
+       font-size: 16px;
+       color: #333;
+       margin-bottom: 5px;
+       text-align: center;
+   }
+
+   .foot .end .right dl dd {
+       text-align: center;
+   }
+
+   .foot .end .right dl dd a {
+       font-size: 12px;
+       color: #333;
+   }
