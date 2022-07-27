@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+
+
+/* a:hover {
+    background: rgba(0, 0, 0, .3);
+} */
+
+.tb-promo {
+    width: 650px;
+    height: 335px;
+    position: relative;
+    margin: 100px auto;
+    background-color: skyblue;
+}
+
+.tb-promo img {
+    width: 650px;
+    height: 335px;
+}
+
+/* 并集选择器把重复的代码合并起来 */
+.left,
+.right {
+    width: 20px;
+    height: 30px;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    position: absolute;
+    top: 50%;
+    margin-top: -15px;
+    background: rgba(0, 0, 0, .7);
+}
+
+.left {
+    left: 0;
+    border-radius: 0 15px 15px 0;
+}
+
+.right {
+    /* 如果一个盒子既有left属性也有right属性，那默认执行left属性，同理top和bottom会默认执行top属性 */
+    right: 0px;
+    border-radius: 15px 0px 0px 15px;
+
+}
+
+.select {
+    width: 70px;
+    height: 13px;
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    margin-left: -35px;
+    background: rgba(255, 255, 255, .3);
+    border-radius: 7.5px;
+}
+
+.select li {
+    width: 8px;
+    height: 8px;
+    float: left;
+    margin: 3px;
+    border-radius: 50%;
+    background-color: aliceblue;
+
+
+}
+
+/* 注意权重的问题  */
+.select .last {
+    background-color: #ff5000;
+}

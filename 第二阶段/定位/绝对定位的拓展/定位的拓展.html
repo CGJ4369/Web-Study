@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>绝对定位的盒子居中</title>
+</head>
+
+<body>
+    <h1>1.绝对定位的盒子居中</h1>
+    <p>加了绝对定位的盒子不能通过 margin:auto水平居中,但是可以通过以下计算方法实现水平和垂直居中。</p>
+    <ul>
+        <li>left: 50%;:让盒子的左侧移动到父级元素的水平中心位置。</li>
+        <li>margin-left:-100px;:让盒子向左移动自身宽度的一半。</li>
+    </ul>
+    举个例子:
+    <a href="绝对定位的盒子居中的举例.html">我是例子</a>
+
+    <h1>2.定位的特殊性</h1>
+    <p>绝对定位和固定定位也和浮动类似。</p>
+    <ol>
+        <li>行内元素添加绝对或者固定定位,可以直接设置高度和宽度。</li>
+        <li>块级元素添加绝对或者固定定位,如果不给宽度或者高度,默认大小是内容的大小。</li>
+    </ol>
+    举个例子:
+    <a href="定位的特殊性的举例.html"></a>
+
+    <h1>3.绝对定位(固定定位)会完全压住盒子</h1>
+    <p>浮动元素不同，只会压住它下面标准流的盒子，但是不会压住下面标准流盒子里面的文字(图片)<br>
+        但是绝对定位（固定定位）会压住下面标准流所有的内容。</p>
+    <p style="color: red;">浮动之所以不会压住文字，因为浮动产生的目的最初是为了做文字环绕效果的。文字会围绕浮动元素</p>
+
+</body>
+
+</html>

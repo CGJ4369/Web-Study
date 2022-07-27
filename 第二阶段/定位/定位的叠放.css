@@ -1,0 +1,28 @@
+body {
+    font-weight: 700;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 300px;
+    left: 0;
+}
+
+.one {
+    background-color: skyblue;
+    /* 在1号盒子加z-index */
+    z-index: -1;
+}
+
+.two {
+    background-color: olivedrab;
+    /* 在2号盒子加auto(一般默认是auto) */
+    z-index: auto;
+}
+
+.three {
+    background-color: orange;
+    z-index: 1;
+}
