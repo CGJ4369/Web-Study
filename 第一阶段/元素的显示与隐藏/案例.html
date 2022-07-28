@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>土豆网视频遮罩显示案例</title>
+    <style>
+        .tudou {
+            position: relative;
+            width: 444px;
+            height: 320px;
+            background-color: aqua;
+            margin: 100px auto;
+        }
+
+        .tudou img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .marsk {
+            /*隐藏遮罩层*/
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, .3)
+                /*插入播放图片*/
+                url("") no-repeat center;
+        }
+
+        /* 当经过tudou盒子时里面的遮罩会显示出来 */
+        .tudou:hover .marsk {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tudou">
+        <div class="marsk">
+        </div>
+        <img src="img/xj.png" alt="我是图片">
+    </div>
+</body>
+
+</html>

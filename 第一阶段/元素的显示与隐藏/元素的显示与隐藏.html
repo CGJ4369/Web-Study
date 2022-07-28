@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>元素的显示与隐藏</title>
+    <style>
+        body {
+            font-size: 700;
+        }
+
+        div {
+            width: 100px;
+            height: 100px;
+        }
+
+        .red {
+            color: red;
+        }
+
+        /* 1. */
+        .display1 {
+            background-color: aqua;
+            /* 隐藏 */
+            display: none;
+            /* 显示 */
+            /* display: block; */
+        }
+
+        .display2 {
+            background-color: orange;
+        }
+
+        /* 2. */
+        .display3 {
+            background-color: aqua;
+            /* 显示 */
+            visibility: visible;
+            /* 隐藏元素不想赢原来的位置 */
+            /* display: none; */
+            /* 隐藏元素想要原来的位置 */
+            /* visibility: hidden; */
+        }
+
+        .display4 {
+            background-color: orange;
+        }
+
+        /* 3. */
+        .display5 {
+            border: 2px solid rgb(212, 24, 24);
+            overflow: scroll;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>元素的显示与隐藏</h1>
+    <p>类似网站广告,当我们点击关闭就不见了,但是我们重新刷新页面,会重新出现!</p>
+    <p class="red">本质:让一个元素在页面中隐藏或者显示出来。</p>
+
+    <h3>1.display属性</h3>
+    <p>display属性用于设置一个元素应如何显示。</p>
+    <ul>
+        <li>display属性用于设置一个元素应如何显示。</li>
+        <li class="red">display : block ;除了转换为块级元素之外,同时还有显示元素的意思display隐藏元素后,不再占有原来的位置。</li>
+    </ul>
+    <p>后面应用及其广泛,搭配JS可以做很多的网页特效。</p>
+    举个例子:<br>
+    <div class="display1"></div>
+    <div class="display2"></div>
+
+    <h3>2.visibility可见性</h3>
+    <p>visibility属性用于指定一个元素应可见还是隐藏。</p>
+    <ul>
+        <li>visibility : visible;元素可视</li>
+        <li>visibility : hidden;元素隐藏</li>
+    </ul>
+    <p class="red">visibility隐藏元素后,继续占有原来的位置。</p>
+    <p>如果隐藏元素想要原来位置,就用visibility : hidden</p>
+    <p>如果隐藏元素不想要原来位置,就用display : none(用处更多重点)</p>
+    举个例子:
+    <div class="display3"></div>
+    <div class="display4"></div>
+
+    <h3>3.overflow溢出</h3>
+    <p>overflow属性指定了如果内容溢出一个元素的框(超过其指定高度及宽度)时,会发什么。</p>
+    <ul>
+        <li>overflow:visible;不剪切内容也不添加滚动条</li>
+        <li>overflow:hidden;不显示超过对象尺寸的内容，超出的部分隐藏掉</li>
+        <li>overflow:scroll;不管超出内容否，总是显示滚动条</li>
+        <li>overflow:auto;超出自动显示滚动条，不超出不显示滚动条</li>
+    </ul>
+    <p class="red">总结：一般情况下，我们都不想让溢出的内容显示出来，因为溢出的部分会影响布局。<br>
+        但是如果有定位的盒子,请慎用overflow:hidden因为它会隐藏多余的部分。</p>
+    举个例子:
+    <div class="display5">
+        overflow属性指定了如果内容溢出一个元素的框(超过其指定高度及宽度）时，会发生什么。
+        属性值
+        描述
+        visible
+        不剪切内容也不添加滚动条
+        hidden
+        不显示超过对象尺寸的内容，超出的部分隐藏掉
+    </div>
+
+
+    <h1>总结</h1>
+    <ol>
+        <li>1. display显示隐藏元素但是不保留位置</li>
+        <li>2. visibility显示隐藏元素但是保留原来的位置</li>
+        <li>3. overflow 溢出显示隐藏但是只是对于溢出的部分处理</li>
+    </ol>
+</body>
+
+</html>
