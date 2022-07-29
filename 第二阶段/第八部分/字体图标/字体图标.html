@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字体图标</title>
+    <style>
+        /* 字体声明 */
+        @font-face {
+            font-family: 'icomoon';
+            src: url('fonts/icomoon.eot?646pvs');
+            src: url('fonts/icomoon.eot?646pvs#iefix') format('embedded-opentype'),
+                url('fonts/icomoon.ttf?646pvs') format('truetype'),
+                url('fonts/icomoon.woff?646pvs') format('woff'),
+                url('fonts/icomoon.svg?646pvs#icomoon') format('svg');
+            font-weight: normal;
+            font-style: normal;
+            font-display: block;
+        }
+
+        span {
+            font-family: 'icomoon';
+            font-size: 100px;
+            background-color: rgb(255, 179, 0);
+        }
+
+        .quan {
+            width: 300px;
+            height: 100px;
+        }
+
+        .quan img {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>2.1字体图标的产生</h1>
+    <p>字体图标使用场景︰主要用于显示网页中通用、常用的一些小图标</p>
+    <p>精灵图是有诸多优点的,但是缺点很明显。</p>
+    <ol>
+        <li>图片文件还是比较大的。</li>
+        <li>图片本身放大和缩小会失真。</li>
+        <li>一旦图片制作完毕想要更换非常复杂。</li>
+    </ol>
+    <p>此时,有一种技术的出现很好的解决了以上问题,就是字体图标iconfont,</p>
+
+
+    <h1>2.2字体图标的优点</h1>
+    <ul>
+        <li>轻量级︰一个图标字体要比一系列的图像要小。一旦字体加载了,图标就会马上渲染出来,减少了服务器请求</li>
+        <li>灵活性∶本质其实是文字,可以很随意的改变颜色、产生阴影、透明效果、旋转等</li>
+        <li>兼容性:几乎支持所有的浏览器,请放心使用</li>
+    </ul>
+    <p>注意:字体图标不能替代精灵技术,只是对工作中图标部分技术的提升和优化。</p>
+    <p>总结:</p>
+    <ol>
+        <li>如果遇到一些结构和样式比较简单的小图标,就用字体图标。</li>
+        <li>如果遇到一些结构和样式复杂一点的小图片,就用精灵图。</li>
+    </ol>
+
+    <h1>2.3字体图标的下载途径</h1>
+    <ul>
+        <li><a href="http://icomoon.io">icomoon字库</a>打开较慢</li>
+        <li><a href="http://www.iconfont.cn/">阿里iconfont字库</a>国内的免费</li>
+    </ul>
+
+    <h1>2.4字体图标的引用</h1>
+    <ul>
+        <li>第一步:font文件夹复制一份到对应网页文件根目录(为了解决兼容性)</li>
+        <li>第二步:在style引入css样式声明(复制固定部分过来就行)</li>
+        <li class="img">第三步:复制下载字体文件里demo.html里的<img src="img/GOB(M]1JTFZ5IWDQQ7~}OWO.png" alt=""></li>
+        <li>第五步:在要用字体的标签指定和声明里font-face里font-family一样的名字</li>
+    </ul>
+    <span></span>
+
+    <h1>2.5字体图标的追加</h1>
+    <p>如果工作中,原来的字体图标不够用了,我们需要添加新的字体图标到原来的字体文件中。</p>
+    <div class="quan"><img src="img/quan.png" alt=""></div>
+    <p>把压缩包里面的 selection.json 重新上传,然后选中自己想要新的图标,从新下载压缩包,并替换原来的文件即可。</p>
+</body>
+
+</html>

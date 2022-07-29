@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>精灵图例子</title>
+    <style>
+        .one {
+            width: 60px;
+            height: 60px;
+            margin: 100px auto;
+            background: url("img/sprite.png") no-repeat -180px 0px;
+        }
+
+        .two {
+            width: 60px;
+            height: 60px;
+            margin: 200px auto;
+            background: url("img/sprite.png") no-repeat -154px -105px;
+        }
+
+        .div {
+            width: 500px;
+            height: 500px;
+            margin: 300px auto;
+        }
+
+        .abc1,
+        .abc2,
+        .abc3 {
+
+            float: left;
+            background: url("img/abcd.jpg") no-repeat;
+        }
+
+        .abc1 {
+            width: 100px;
+            height: 110px;
+            background-position: -240px -8px;
+
+        }
+
+        .abc2 {
+            width: 104px;
+            height: 108px;
+            background-position: -97px -141px;
+
+        }
+
+        .abc3 {
+            width: 104px;
+            height: 105px;
+            background-position: -254px -562px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="one"></div>
+    <div class="two"></div>
+
+    <div class="div">
+        <!-- 用行内元素span就不用加浮动了 -->
+        <div class="abc1"></div>
+        <div class="abc2"></div>
+        <div class="abc3"></div>
+    </div>
+</body>
+
+</html>
