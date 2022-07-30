@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS三角形的制作</title>
+    <style>
+        .box1 {
+            width: 0;
+            height: 0;
+            /* border: 50px solid orange; */
+            border-top: 50px solid blue;
+            border-bottom: 50px solid red;
+            border-left: 50px solid green;
+            border-right: 50px solid pink;
+            margin: 30px auto;
+        }
+
+        .box2 {
+            width: 0;
+            height: 0;
+            /* 以下两行是为了兼容性的问题 */
+            line-height: 0;
+            font-size: 0;
+            border: 50px solid transparent;
+            border-top-color: orange;
+            margin: 50px auto;
+        }
+
+        .smallbox {
+            position: absolute;
+            top: -40px;
+            left: 15px;
+            width: 0;
+            height: 0;
+            border: 20px solid transparent;
+            border-bottom-color: blue;
+        }
+
+        .bigbox {
+            position: relative;
+            width: 300px;
+            height: 500px;
+            background-color: blue;
+            margin: 100px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>网页中常见一些三角形,使用CSS直接画出来就可以,不必做成图片或者字体图标一张图。</h1>
+    <div class="box1"></div>
+    <div class="box2"></div>
+
+
+    <div class="bigbox">
+        <div class="smallbox"></div>
+    </div>
+</body>
+
+</html>
