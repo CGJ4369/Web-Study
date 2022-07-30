@@ -109,6 +109,10 @@
        font-size: 14px #666;
    }
 
+   .user img {
+       vertical-align: middle;
+   }
+
    /* 广告模块 */
    .banner {
        height: 421px;

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盒子文字垂直居中对齐</title>
+    <style>
+        .ver {
+            width: 200px;
+            height: 200px;
+            /* 基线居中 */
+            /* vertical-align: bottom; */
+            /* 中线居中 */
+            vertical-align: middle;
+        }
+
+        textarea {
+            resize: none;
+            vertical-align: middle;
+        }
+
+        .kongqi {
+            border: 2px solid red;
+        }
+
+        .kongqi img {
+            width: 200px;
+            height: 200px;
+            /* 1.vertical-align解决 */
+            /* vertical-align: bottom; */
+            /* 2.转换成块元素 */
+            display: block;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>1.vertical-align属性应用</h1>
+    <p>官方解释∶用于设置一个元素的垂直对齐方式，但是它只针对于<em style="color: red;">行内元素或者行内块元素有效</em>。</p>
+    <p>语法:vertical-align : baseline | top | middle | bottom</p>
+    <p>值--------------------描述</p>
+    <p>baseline--------------(基线)默认。元素放置在父元素的基线上</p>
+    <p>top-------------------(顶线)把元素的顶端与行中最高元素的顶端对齐</p>
+    <p>middle----------------(中线)把此元素放置在父元素的中部。</p>
+    <p>bottom----------------(底线)把元素的顶端与行中最低的元素的顶端对齐。</p>
+    举个例子:<br>
+    <img src="img/cgx.jpg" alt="" class="ver">
+    我是沉贯溪
+    <br>
+    <!-- 文本域也是行内块元素，也可以运用该属性 -->
+    <textarea name="" id="" cols="30" rows="10"></textarea>我是文本域<br>
+
+    <h1>2.解决图片底部默认空白缝隙问题</h1>
+    <p>bug :图片底侧会有一个空白缝隙，原因是行内块元素会和文字的基线对齐。主要解决方法有两种:</p>
+    <ol>
+        <li>1.给图片添加vertical-align:middle | top | bottom等。(提倡使用的)</li>
+        <li>2.把图片转换为块级元素display: block;</li>
+    </ol>
+    举个例子:
+    <div class="kongqi">
+        <img src="img/cgx.jpg" alt="">
+    </div>
+</body>
+
+</html>
