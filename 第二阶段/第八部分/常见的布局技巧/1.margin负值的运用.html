@@ -8,12 +8,22 @@
     <title>margin负值的运用</title>
     <style>
         ul li {
+            position: relative;
             float: left;
             list-style: none;
             width: 150px;
             height: 200px;
             border: 1px solid red;
             margin-left: -1px;
+        }
+
+        li:hover {
+            /* 1.让每个盒子margin往左侧移动-1px正好压住相邻盒子边框 */
+            /* position: relative;
+            border: 1px solid blue; */
+            /* 2.鼠标经过某个盒子的时候，提高当前盒子的层级即可(每个li都需要加相对定位) */
+            z-index: 1;
+            border: 1px solid blue;
         }
     </style>
 </head>
