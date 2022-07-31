@@ -24,11 +24,55 @@
             /* 3.上边框宽度要大，右边框宽度稍小 */
             border-width: 100px 50px 0 0;
         }
+
+        .price {
+            width: 160px;
+            height: 24px;
+            border: 1px solid red;
+            margin: 0 auto;
+            line-height: 24px;
+        }
+
+        .miaosha {
+            position: relative;
+            float: left;
+            width: 90px;
+            height: 100%;
+            background-color: red;
+            text-align: center;
+            color: #fff;
+            font-size: 12px;
+            text-align: center;
+        }
+
+        .miaosha i {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 0;
+            height: 0;
+            border-color: transparent #fff transparent transparent;
+            border-style: solid;
+            border-width: 24px 10px 0 0;
+        }
+
+        .orange {
+            font-size: 12px;
+            color: gray;
+            text-decoration: line-through;
+        }
     </style>
 </head>
 
 <body>
     <div class="box1"></div>
+    <div class="price">
+        <span class="miaosha">
+            ￥114514
+            <i></i>
+        </span>
+        <span class="orange">￥12138</span>
+    </div>
 </body>
 
 </html>
