@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>结构伪类选择器</title>
+    <style>
+        /* 1.选择第一个孩子 */
+        .one li:first-child {
+            background-color: blue;
+        }
+
+        /* 2.选择ul里面的最后一个孩子 */
+        .one li:last-child {
+            background-color: blue;
+        }
+
+        /* 3.选择ul里面第三个孩子 */
+        .one li:nth-child(3) {
+            background-color: blue;
+        }
+
+        .one li:nth-child(5) {
+            background-color: blue;
+        }
+
+        /* 以上都只能选一个 */
+
+        /* 以下可以多选 */
+
+        /* 奇数选择 */
+        /* .more li:nth-child(odd) {
+            background-color: pink;
+        } */
+
+        /* 偶数选择 */
+        .more li:nth-child(even) {
+            background-color: pink;
+        }
+
+        /* 公式选择 */
+        /* 从0开始 每往后计算一步就加1,这里规定要括号里要为n这个字母*/
+        .fomat li:nth-child(n) {
+            background-color: rgb(72, 170, 105);
+        }
+
+        .format li:nth-child(2n) {
+            background-color: rgb(72, 170, 105);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>结构伪类选择器</h1>
+    <p>结构伪类选择器主要根据文档结构来选择元素,常用于根据父级选择器里面的子元素</p>
+    <div style="color: red;">
+        <li> nth-child(n)选择某个父元素的一个或多个特定的子元素</li>
+        <li>n可以是数字,关键字和公式</li>
+        <li>n如果是数字,就是选择第n个子元素,里面数字从1开始...</li>
+        <li>n可以是关键字:even偶数,odd奇数</li>
+        <li>n可以是公式:常见的公式如下(如果n是公式,则从O开始计算,但是第0个元素或者超出了元素的个数会被忽略)</li>
+    </div>
+
+    <!-- 选一个孩子 -->
+    <h3>数字(单个)选择</h3>
+    <ul class="one">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+    </ul>
+    <hr>
+    <!-- 选多个孩子 -->
+    <h3>关键字选择</h3>
+    <ul class="more">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+    </ul>
+    <hr>
+    <h3>公式选择</h3>
+    <ul class="fomat">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+    <br>
+    <ul class="format">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+    </ul>
+</body>
+
+</html>

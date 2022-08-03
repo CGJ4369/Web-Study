@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3属性选择器</title>
+    <style>
+        /* 1. */
+        .one input[value] {
+            color: blue;
+        }
+
+        /* 2. 属性=值*/
+        /* 加不加双引号都无所谓 */
+        .two input[type="username"] {
+            color: aqua;
+        }
+
+        /* 3.两种方法，一种直接像第一种一样的做法，另一种是直接选择属性开头的某些元素 */
+        /* 3.1*/
+        /* .three div[class] {
+            color: aquamarine;
+        } */
+
+        /* 3.2 */
+        .three div[class^=icon] {
+            color: orange;
+        }
+
+        /* 4. */
+        .four section[class$=data] {
+            color: blue;
+        }
+
+        /* 5. */
+        .five section[class*=a] {
+            color: pink;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>属性选择器</h1>
+    <p>属性选择器可以根据元素特定属性的来选择元素。这样就可以不用借助与类或者id选择器</p>
+    <div class="one">
+        <h3>1.利用属性选择器就不用借助id或类选择器</h3>
+        举个例子:<br>
+        <input type="text" value="我是沉贯溪">
+        <input type="text">
+    </div>
+
+    <div class="two">
+        <h3>2.属性=值(重要)</h3>
+        举个例子:<br>
+        <input type="username">
+        <input type="password" name="" id="">
+    </div>
+
+    <div class="three">
+        <h3>3.选择属性值开头的某些元素</h3>
+        <div class="icon1">114514</div>
+        <div class="icon2">114514</div>
+        <div class="icon3">114514</div>
+        <div class="icon4">114514</div>
+        <div class="icon5">114514</div>
+        <div>114514</div>
+    </div>
+
+    <div class="four">
+        <h3>4.选择属性结尾的某些元素</h3>
+        <section class="wos-data">我是沉贯溪</section>
+        <section class="wos-data">我是沉贯溪</section>
+        <section class="wos-data">我是沉贯溪</section>
+        <section class="wos-dat">我是沉贯溪</section>
+    </div>
+
+    <div class="five">
+        <h3>5.选择属性中的任意元素,无论什么位置，其中如果选择两个及以上的元素要求是连在一起的才行</h3>
+        <section class="caw">外卖员</section>
+        <section class="cwa">外卖员</section>
+        <section class="cwxza">外卖员</section>
+        <section class="cwqa">外卖员</section>
+    </div>
+
+    <h1 style="color: red;">注意:类选择器、属性选择器、伪类选择器权重都为10</h1>
+    比如说
+    <h3>section权重为1,[class$=data]权重为10,因此section[class$=data]权重就是11</h3>
+</body>
+
+</html>
