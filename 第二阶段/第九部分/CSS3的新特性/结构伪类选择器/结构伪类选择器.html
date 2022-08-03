@@ -49,19 +49,37 @@
         .format li:nth-child(2n) {
             background-color: rgb(72, 170, 105);
         }
+
+        .wo div:nth-child(1) {
+            background-color: aqua;
+        }
+
+
+        .ni div:nth-of-type(1) {
+            background-color: aqua;
+        }
+
+        .ta div:first-of-type {
+            background-color: bisque;
+        }
+
+        /* wuxu权重为10,li元素权重为1,:nth-child()权重为10,加起来权重为21 */
+        .wuxu li:nth-child(1) {
+            background-color: orange;
+        }
     </style>
 </head>
 
 <body>
     <h1>结构伪类选择器</h1>
     <p>结构伪类选择器主要根据文档结构来选择元素,常用于根据父级选择器里面的子元素</p>
-    <div style="color: red;">
+    <ul style="color: red;">
         <li> nth-child(n)选择某个父元素的一个或多个特定的子元素</li>
         <li>n可以是数字,关键字和公式</li>
         <li>n如果是数字,就是选择第n个子元素,里面数字从1开始...</li>
         <li>n可以是关键字:even偶数,odd奇数</li>
         <li>n可以是公式:常见的公式如下(如果n是公式,则从O开始计算,但是第0个元素或者超出了元素的个数会被忽略)</li>
-    </div>
+    </ul>
 
     <!-- 选一个孩子 -->
     <h3>数字(单个)选择</h3>
@@ -107,6 +125,38 @@
         <li>5</li>
         <li>6</li>
     </ul>
+
+    <p>E:first-of-type和E:last-of-type和上面一样都是选择第一个或者最后一个孩子</p>
+    <section class="ta">
+        <p>我是沉贯溪</p>
+        <div>我不是沉贯溪</div>
+        <div>我是古天乐</div>
+    </section>
+
+    <h3 style="color: red;">注意:</h3>
+    <p>1. nth-child对父元素里面所有孩子排序选择(序号是固定的)先找到第n个孩子,然后看看是否和E匹配</p>
+    <p>2. nth-of-type对父元素里面指定子元素进行排序选择。先去匹配E,然后再根据E找第n个孩子</p>
+    例如:<br>
+    <section class="wo">
+        <p>我是沉贯溪</p>
+        <div>我不是沉贯溪</div>
+        <div>我是古天乐</div>
+    </section>
+
+    <section class="ni">
+        <p>我是沉贯溪</p>
+        <div>我不是沉贯溪</div>
+        <div>我是古天乐</div>
+    </section>
+
+    <ol class="wuxu">
+        <p>casaae</p>
+        <li>woshi</li>
+        <li>woshi</li>
+        <li>woshi</li>
+        <li>woshi</li>
+        <li>woshi</li>
+    </ol>
 </body>
 
 </html>
