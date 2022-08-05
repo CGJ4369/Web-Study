@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3盒子模型</title>
+    <style>
+        /* * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        } */
+
+        div {
+            width: 300px;
+            height: 300px;
+            background-color: aqua;
+            padding: 30px;
+            border: 30px solid red;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS3盒子模型</h1>
+    <p>CSS3中可以通过box-sizing来指定盒模型,有2个值:即可指定为content-box、border-box,这样我们计算盒子大小的方式就发生了改变。</p>
+    <p>可以分为两种情况:</p>
+    <ol>
+        <li>box-sizing:content-box盒子大小为width + padding + border (以前默认的)</li>
+        <li>box-sizing: border-box盒子大小为width</li>
+    </ol>
+    <p>如果盒子模型我们改为了box-sizing: border-box,那padding和border就不会撑大盒子了(前提padding和border不会超过width宽度)</p>
+
+    举个例子:<br>
+    <div>我是沉贯溪</div>
+</body>
+
+</html>

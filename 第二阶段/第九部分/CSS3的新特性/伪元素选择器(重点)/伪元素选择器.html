@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪元素选择器</title>
+    <style>
+        div {
+            width: 300px;
+            height: 300px;
+            background-color: skyblue;
+        }
+
+        div::before {
+            content: "我";
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background-color: azure;
+        }
+
+        div::after {
+            content: "沉贯溪";
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background-color: azure;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>伪元素选择器可以帮助我们利用CSS创建新标签元素,而不需要HTML标签,从而简化HTML结构。</h1>
+    <p>语法:</p>
+    <!-- 旧版是只有一个冒号:before的,但无论新版是写两个冒号还是一个冒号，浏览器都会编译成两个冒号的 -->
+    <p>::before----在元素内部的前面插入内容</p>
+    <p>::after------在元素内部的后面插入内容</p>
+
+    <h3 style="color: red;">注意:</h3>
+    <ul>
+        <li style="color: red;">before和after创建一个元素,但是属于行内元素</li>
+        <li>新创建的这个元素在文档树中是找不到的,所以我们称为伪元素{</li>
+        <li>语法: element::before{}(前面的element元素是伪元素的父亲)</li>
+        <li style="color: red;">before和after必须有content属性</li>
+        <li>before在父元素内容的前面创建元素,after在父元素内容的后面插入元素</li>
+        <li>伪元素选择器和标签选择器一样,权重为1</li>
+    </ul>
+    举个例子:<br>
+    <div>是</div>
+
+</body>
+
+</html>

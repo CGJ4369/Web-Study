@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3calc函数</title>
+    <style>
+        .father {
+            width: 300px;
+            height: 200px;
+            background-color: aqua;
+        }
+
+        .son {
+            width: calc(100% - 50px);
+            height: calc(100% - 30px);
+            background-color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>css3 calc函数:</h1>
+    <p>calc()此CSS函数让你在声明CSS属性值时执行一些计算。</p>
+
+</body>
+<p>语法:width: calc(100% - 80px);</p>
+<p>括号里面可以使用＋ - * /来进行计算。</p>
+举个例子:<br>
+<div class="father">
+    <div class="son"></div>
+</div>
+
+</html>

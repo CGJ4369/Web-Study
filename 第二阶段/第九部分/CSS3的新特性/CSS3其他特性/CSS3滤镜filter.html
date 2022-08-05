@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3滤镜filter</title>
+    <style>
+        div {
+            width: 500px;
+            height: 400px;
+            margin: 100px auto;
+
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            filter: blur(0px);
+        }
+
+        img:hover {
+            filter: blur(10px);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS3滤镜filter:</h1>
+    <P>filter CSS属性将模糊或颜色偏移等图形效果应用于元素。</P>
+    <p>语法:filter:函数();例如:filter: blur(5px);blur模糊处理数值越大越模糊</p>
+</body>
+<div>
+    <img src="img/xj.png" alt="">
+</div>
+
+</html>
