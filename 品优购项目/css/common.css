@@ -47,6 +47,10 @@
     float: right;
 }
 
+.fr ul li {
+    cursor: pointer;
+}
+
 /* 选择偶数的小li */
 .shortcut .fr ul li:nth-child(even) {
     width: 1px;
@@ -112,4 +116,40 @@
     font-size: 16px;
     color: #fff;
     margin-top: -1px;
+}
+
+.hotwords {
+    position: absolute;
+    top: 66px;
+    left: 346px
+}
+
+.hotwords a {
+    margin: 0 10px;
+}
+
+.shopcar {
+    position: absolute;
+    right: 60px;
+    top: 30px;
+    width: 140px;
+    height: 35px;
+    border: 1px solid #dfdfdf;
+    background-color: #f7f7f7;
+    line-height: 35px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.shopcar::before {
+    font-family: 'icomoon';
+    content: "\e93a";
+    margin-right: 5px;
+    color: #b1191a;
+}
+
+.shopcar::after {
+    font-family: 'icomoon';
+    content: "\e920";
+    margin-left: 10px;
 }
