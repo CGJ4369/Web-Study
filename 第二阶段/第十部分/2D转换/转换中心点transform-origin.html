@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>转换中心点transform-origin</title>
+    <style>
+        .one {
+            width: 300px;
+            height: 300px;
+            background-color: orange;
+            transition: all 1s;
+            /* 默认是center center */
+            /* transform-origin: right bottom; */
+            /* transform-origin: 95% 65%; */
+            transform-origin: 50px 50px;
+
+        }
+
+        .one:hover {
+            transform: rotate(360deg);
+        }
+
+        .father {
+            overflow: hidden;
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+        }
+
+        .son {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            transform: rotate(180deg);
+            transform-origin: left bottom;
+            transition: all .2s;
+        }
+
+        .father:hover .son {
+            transform: rotate(0deg);
+        }
+    </style>
+</head>
+
+<body>
+    <p>我们可以设置元素转换的中心点</p>
+    <h3>1.语法</h3>
+    <p>transform-origin:x y;</p>
+    <h3>2.重点</h3>
+    <ul>
+        <li>注意后面的参数x和y用空格隔开</li>
+        <li>x y 默认转换的中心点是元素的中心点(50% 50%)</li>
+        <li>还可以给x y设置像素或者方位名词( top bottom left right center )</li>
+    </ul>
+    举个例子:
+    <div class="one"></div>
+    案例：
+    <div class="father">
+        <div class="son"></div>
+    </div>
+    <!-- 或者用伪元素做 -->
+</body>
+
+</html>

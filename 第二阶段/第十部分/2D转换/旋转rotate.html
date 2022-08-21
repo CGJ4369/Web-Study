@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D转换之旋转rotate</title>
+    <style>
+        .lizi1 {
+            width: 300px;
+            height: 300px;
+            background-color: skyblue;
+            transition: all .2s;
+        }
+
+        .lizi1:hover {
+            transform: rotate(20deg);
+        }
+
+        .two {
+            position: relative;
+            width: 200px;
+            height: 25px;
+            border: 1px solid black;
+        }
+
+        .two::after {
+            content: "";
+            /* 伪元素是行内元素要转为块级元素 */
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            width: 15px;
+            height: 15px;
+            border-right: 1px solid orange;
+            border-bottom: 1px solid orange;
+            transform: rotate(45deg);
+            transition: all .2s;
+        }
+
+        .two:hover::after {
+            /* 基于上面已经写得度数增加就可以 */
+            transform: rotate(-135deg);
+        }
+    </style>
+</head>
+
+<body>
+    <p>2D旋转指的是让元素在2维平面内顺时针旋转或者逆时针旋转。</p>
+    <h2>1.语法</h2>
+    <p>transform : rotate(度数)</p>
+    <h2>2.重点</h2>
+    <ul>
+        <li>rotate里面跟度数,单位是deg 比如rotate(45deg)</li>
+        <li>角度为正时,顺时针,负时,为逆时针</li>
+        <li>默认旋转的中心点是元素的中心点</li>
+    </ul>
+    举个例子:<br>
+    <div class="lizi1"></div>
+    <!-- 三角图标设置 -->
+    <div class="two"></div>
+</body>
+
+</html>

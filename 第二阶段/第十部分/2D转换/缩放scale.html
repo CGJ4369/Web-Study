@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>缩放scale</title>
+    <style>
+        .one {
+            width: 300px;
+            height: 300px;
+            background-color: skyblue;
+
+        }
+
+        .one:hover {
+            /* x和y都不包括单位，只是数字,中间跟逗号 */
+            /* transform: scale(2, 1); */
+            /* transform: scale(2); */
+            /* 里面单个数字等价于相同的两个数字 */
+            transform: scale(0.5);
+            /* 固定某个点放大或缩放  并且不影响其他盒子*/
+            transform-origin: right bottom;
+        }
+
+        .a {
+            /* 放大多出来的部分截掉 */
+            overflow: hidden;
+            width: 300px;
+            height: 300px;
+            float: left;
+            margin: 10px;
+        }
+
+        img {
+            width: 300px;
+            height: 300px;
+            transition: all .3s;
+        }
+
+        img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+    <p>缩放,顾名思义,可以放大和缩小。只要给元素添加上了这个属性就能控制它放大还是缩小。</p>
+    <h3>1.语法</h3>
+    <p>transform : scale(x,y);</p>
+    <h3>2.注意</h3>
+    <ul>
+        <li>注意其中的x和y用逗号分隔</li>
+        <li>transform:scale(1,1):宽和高都放大一倍,相对于没有放大</li>
+        <li>transform:scale(2,2):宽和高都放大了2倍</li>
+        <li>transform:scale(2):只写一个参数,第二个参数则和第一个参数一样,相当于scale(2,2)</li>
+        <li>transform:scale(0.5,0.5)∶缩小</li>
+        <li style="color:red">sacle缩放最大的优势:可以设置转换中心点缩放,默认以中心点缩放的,而且不影响其他盒子</li>
+    </ul>
+    举个例子：<br>
+    <div class="one"></div>
+    114514
+    案例:<br>
+    <div class="a"><a href="#"><img src="../img/xj.png" alt=""></a></div>
+    <div class="a"><a href="#"><img src="../img/xj.png" alt=""></a></div>
+    <div class="a"><a href="#"><img src="../img/xj.png" alt=""></a></div>
+</body>
+
+</html>
