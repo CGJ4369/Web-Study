@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1.动画的基本使用</title>
+    <style>
+        /* 单状态动画 */
+        /* 1.定义动画 */
+        @keyframes move {
+
+            /* 开始状态 */
+            0% {
+                transform: translateX(0px);
+            }
+
+            /* 结束状态 */
+            100% {
+                transform: translateX(1000px);
+            }
+        }
+
+        .one {
+            width: 300px;
+            height: 300px;
+            background-color: skyblue;
+            /* 2.调用动画 */
+            /* 动画名称 */
+            animation-name: move;
+            /* 持续时间 */
+            animation-duration: 2s;
+        }
+
+        /* 多状态变化 */
+        /* 1．可以做多个状态的变化 keyframe关键帧*/
+        /* 2．里面的百分比要是整数*/
+        /* 3．里面的百分比就是总的时间（我们这个案例10s）的划分*/
+        @keyframes myfirst {
+            0% {}
+
+            25% {
+                transform: translate(1000px, 0);
+            }
+
+            50% {
+                transform: translate(1000px, 500px);
+            }
+
+            75% {
+                transform: translate(0px, 500px);
+            }
+
+            100% {
+                transform: translate(0px, 0px);
+            }
+        }
+
+        .two {
+            width: 300px;
+            height: 300px;
+            background-color: orange;
+            animation-name: myfirst;
+            animation-duration: 10s
+        }
+    </style>
+</head>
+
+<body>
+    <h1>动画分两步</h1>
+    <h3>1.定义动画</h3>
+    <h3>2.在调用动画</h3>
+    <p>当运行网页是可以自动播放</p>
+    <p>动画是使元素从一种样式逐渐变化为另一种样式的效果。您可以改变任意多的样式任意多的次数。</p>
+    <p style="color: red;">请用百分比来规定变化发生的时间,或用关键词"from"和"to”,等同于0%和100%。</p>
+    <p>(1)用keyframes定义动画(类似定义类选择器)</p>
+    语义：<br>
+    <section>
+        @keyfraames 动画名称{
+        0%{
+        width:100px;
+        }
+        100%{
+        width:200px;
+        }
+        }
+    </section>
+    <p>(2)元素使用动画</p>
+    <section>
+        div {
+        width : 200px;
+        height: 200px;
+        background-color: aqua;
+        margin: 100px auto;
+        <!-- 调用动画 -->
+        animation-name :动画名称;
+        <!-- 持续时间 -->
+        animation-duration:持续时间;
+        }
+    </section>
+    举个例子:<br>
+    <!-- 但状态变化 -->
+    <div class="one"></div>
+    <!-- 多状态变化 -->
+
+    <div class="two"></div>
+
+</body>
+
+</html>
