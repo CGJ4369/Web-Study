@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小熊奔跑动画-steps()运用案例</title>
+    <style>
+        body {
+            background-color: #ccc;
+        }
+
+        /* .bg2 {
+            position: absolute;
+            bottom: 0px;
+            width: 3840px;
+            height: 569px;
+            background: url(../小熊奔跑动画案例/img/bg2.png) no-repeat;
+        }
+
+        bg1 {
+            position: absolute;
+            bottom: 0px;
+            width: 3840px;
+            height: 336px;
+            background: url(../小熊奔跑动画案例/img/bg1.png) no-repeat;
+        } */
+
+        .bg1 {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 336px;
+            background: url(../小熊奔跑动画案例/img/bg1.png) no-repeat;
+            animation: bg 10s linear infinite;
+        }
+
+        .bg2 {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 569px;
+            background: url(../小熊奔跑动画案例/img/bg2.png) no-repeat;
+            animation: bg 10s linear infinite;
+        }
+
+        @keyframes bg {
+            0% {
+                background-position: 0 0;
+            }
+
+            100% {
+                background-position: -2004px 0;
+            }
+
+        }
+
+        .xiong {
+            position: absolute;
+            overflow: hidden;
+            bottom: 0;
+            width: 200px;
+            height: 100px;
+            background: url(../小熊奔跑动画案例/img/bear.png) no-repeat;
+            /* 可以添加多个动画，用逗号隔开 */
+            animation: bear .4s steps(8) infinite, move 5s ease-out forwards;
+        }
+
+        @keyframes bear {
+            0% {
+                background-position: 0 0;
+            }
+
+            100% {
+                background-position: -1600px 0;
+            }
+        }
+
+        @keyframes move {
+            0% {
+                left: 0;
+            }
+
+            100% {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="bg2">
+        <div class="bg1">
+        </div>
+    </div>
+    <div class="xiong"></div>
+
+
+
+</body>
+
+</html>

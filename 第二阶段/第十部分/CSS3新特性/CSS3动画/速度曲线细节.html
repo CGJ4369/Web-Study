@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>速度曲线细节</title>
+    <style>
+        .one {
+            width: 0;
+            height: 30px;
+            background-color: skyblue;
+            /* steps就是分几步完成动画，有了steps 就不要写easeh或者linear,因为steps也属于animation-timing-function属性的 */
+            animation: w 4s steps(5) forwards;
+        }
+
+        @keyframes w {
+            0% {
+                width: 0;
+            }
+
+            100% {
+                width: 200px;
+            }
+        }
+
+        .two {
+            overflow: hidden;
+            /* 让文字强制一行内显示 */
+            white-space: nowrap;
+            font-size: 20px;
+            width: 0;
+            height: 30px;
+            background-color: skyblue;
+            animation: m 4s steps(10) forwards;
+        }
+
+        @keyframes m {
+            0% {
+                width: 0;
+            }
+
+            100% {
+                width: 200px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>steps指定了时间函数中的间隔数量(步长)</h1>
+    举个例子:<br>
+    <div class="one"></div>
+    再举个例子:<br>
+    <div class="two">大家好啊我是说的道理</div>
+</body>
+
+</html>
