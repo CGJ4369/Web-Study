@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D旋转rotate3d</title>
+    <style>
+        body {
+            perspective: 300px;
+        }
+
+        .one {
+            display: block;
+            width: 100px;
+            height: 100px;
+            transition: all 3s;
+            margin: 100px auto;
+        }
+
+        .one:hover {
+            /* 左手准则，手拇指指向x轴正方向(也就是向右)。其余弯曲的方向是该元素沿着x轴旋转的方向 */
+            /* transform: rotateX(45deg); */
+            /* 左手准则，手拇指指向y轴正方向(也就是向下)。其余弯曲的方向是该元素沿着y轴旋转的方向 */
+            /* transform: rotateY(180deg); */
+            /* 左手准则，手拇指指向z轴正方向(也就是向我们)。其余弯曲的方向是该元素沿着z轴旋转的方向 */
+            /* transform: rotatez(180deg); */
+            /* 沿着矢量旋转 */
+            transform: rotate3d(1, 1, 0, 180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>6.5 3D旋转rotate3d</h1>
+    <p>3D旋转指可以让元素在三维平面内沿着x轴,y轴,z轴或者自定义轴进行旋转。语法</p>
+    <ul>
+        <li>transform:rotateX(45deg):沿着x轴正方向旋转45度</li>
+        <li>transforia:rotateY(45deg):沿着y轴正方向旋转45deg</li>
+        <li>transform:rotateZ(45deg):沿着Z轴正方向旋转45deg</li>
+        <li>transform:rotate3d(x,y,z,deg):沿着自定义轴旋转deg为角度(了解即可)</li>
+    </ul>
+    举个例子<br>
+    <img src="../img/xj.png" alt="" class="one">
+</body>
+
+</html>

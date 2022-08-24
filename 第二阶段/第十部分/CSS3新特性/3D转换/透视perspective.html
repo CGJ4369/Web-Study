@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>透视perspective</title>
+    <style>
+        body {
+            /* 越大，看到的就越小，反之 */
+            perspective: 500px;
+        }
+
+        div {
+            width: 300px;
+            height: 300px;
+            background-color: skyblue;
+            /* z轴越大(正值)我们看到的就越大，越小看到的就越小，即使是负数也可以 */
+            transform: translate3d(400px, 100px, 100px);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>6.3透视perspective</h1>
+    <p>在2D平面产生近大远小视觉立体，但是只是效果二维的</p>
+    <ul>
+        <li>透视我们也称为视距∶视距就是人的眼睛到屏幕的距离</li>
+        <li>距离视觉点越近的在电脑平面成像越大，越远成像越小</li>
+        <li>透视的单位是像素</li>
+    </ul>
+    <h2 style="color: red;">注意:透视写在被观察元素的父盒子上面</h2>
+    举个例子:<br>
+    <div></div>
+</body>
+
+</html>
