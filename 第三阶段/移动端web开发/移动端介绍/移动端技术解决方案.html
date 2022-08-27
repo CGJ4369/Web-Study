@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>CSS3盒子模型</h1>
+    <ul>
+        <li>传统模式宽度计算∶盒子的宽度=CSS中设置的width + border + padding</li>
+        <li>CSS3盒子模型:盒子的宽度=CSS中设置的宽度width里面包含了border和padding</li>
+    </ul>
+    <p class="red">移动端可以全部CSS3盒子模型</p>
+    <p class="red">PC端如果完全需要兼容,我们就用传统模式,反之,我们用c3盒子模型</p>
+
+    <h1>点击高亮我们需要清除清除设置为transparent完成透明</h1>
+    <p>语法:-webkit-tap-highlight-color: transparent;</p>
+
+    <h1>在移动端浏览器默认的外观在ios上加上这个属性才能给按钮和输入框自定义样式</h1>
+    <p>语法:-webkit-appearance: none;</p>
+
+    <h1>禁用长按页面时的弹出菜单</h1>
+    <p>语法:img,a { -webkit-touch-callout: none; }</p>
+</body>
+
+</html>

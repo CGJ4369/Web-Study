@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,
+    minimum-scale=1.0,user-scalable=no">
+    <title>Document</title>
+    <style>
+        div {
+            width: 500px;
+            height: 500px;
+            border: 2px solid red;
+            background: url(img/dog.jpg) no-repeat;
+            /* background-size: 500px 200px; */
+            /* 1.只写一个参数，肯定是宽度，高度省略，会等比例缩放 */
+            /* background-size: 500px; */
+            /* 2.里面的单位可以跟% 相对于父盒子来说的 */
+            /* background-size: 50%; */
+            /* 3.cover要完全覆盖div 可能有部分背景图像显示不全 */
+            /* background: cover; */
+            /* 4.contain 高度宽度等比例拉伸，当宽度或高度铺满div盒子就会停止拉伸 导致可能有部分空白区域 */
+            background-size: contain;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>3.1物理像素&物理像素比</h1>
+    <ul>
+        <li>物理像素点指的是屏幕显示的最小颗粒,是物理真实存在的。这是厂商在出厂时就设置好了,比如苹果6\7\8是750*1334</li>
+        <li>我们开发时候的1px不是一定等于1个物理像素的</li>
+        <li>PC端页面,1个px等于1个物理像素的,但是移动端就不尽相同</li>
+        <li>一个px的能显示的物理像素点的个数,称为物理像素比或屏幕像素比</li>
+    </ul>
+    <p>1.物理像素 就是我们说的分辨率 iPhone8的物理像素是750</p>
+    <p>2.在iPhone8里面 1px 开发像素 = 2个物理像素</p>
+
+    <h1>3.3背景缩放 background-size</h1>
+    <p>background-size属性规定背景图像的尺寸</p>
+    语法:<br>
+    background-size:背景图片宽度 背景图片高度;<br>
+    <div></div>
+</body>
+
+</html>
