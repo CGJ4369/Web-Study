@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            display: flex;
+            width: 800px;
+            height: 300px;
+            background-color: skyblue;
+            /* 默认主轴是x轴row */
+            flex-direction: column;
+            justify-content: center;
+            /* 如果是侧轴居中 */
+            /* 拉伸 如果主轴是x轴，那子盒子不能给高度，如果主轴是y轴，那子盒子不能给高度*/
+            /* align-items: stretch; */
+            align-items: center;
+
+        }
+
+
+        div span {
+            width: 150px;
+            height: 100px;
+            background-color: purple;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>align-items设置侧轴上的子元素排列方式(单行)</h1>
+    <p>该属性是控制子项在侧轴(默认是y轴)上的排列方式在子项为单项的时候使用</p>
+    举个例子:<br>
+</body>
+<div>
+    <span>1</span>
+    <span>2</span>
+    <span>3</span>
+</div>
+
+</html>
