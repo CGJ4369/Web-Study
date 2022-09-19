@@ -64,8 +64,28 @@ obj.sayHi();
 
 
 
+//利用构造函数创建对象
+//new 构造函数名（）;
+function Star(uname, age, sex) {
+    this.name = uname;
+    this, age = age;
+    this.sex = sex;
+    this.sing = function (sang) {
+        console.log(sang);
+    }
+}
 
-
+var cgx = new Star("陈冠希", 18, "男");
+//console.log(typeof cgx);
+console.log(cgx.name);
+console.log(cgx["sex"]);
+cgx.sing("中国人");
+var zbz = new Star("张柏芝", 18, "女");
+console.log(zbz.name);
+console.log(zbz.age);
+//1.构造函数名字首字母要大写
+//2.构造函数不需要return就可以返回结果 
+//3.属性和方法前面必须添加this
 
 
 
