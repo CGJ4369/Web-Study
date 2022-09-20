@@ -18,6 +18,20 @@ var obj = {
 //逗号隔开
 //方法冒号后面跟一个匿名函数
 
+// 对象方法
+//     对象的方法定义了一个函数，并作为对象的属性存储。
+//     对象方法通过添加 () 调用 (作为一个函数)。
+//     该实例访问了 person 对象的 fullName() 方法:加括号就直接输出值
+var person = {
+    firstName: "jone",
+    lastName: "doe",
+    id: 114514,
+    fullName: function () {
+        return this.firstName + " " + this.lastName;
+    }
+};
+console.log(person.fullName());
+
 //2.使用对象
 //（1）调用对象属性
 console.log(obj.uname);
@@ -68,7 +82,7 @@ obj.sayHi();
 //new 构造函数名（）;
 function Star(uname, age, sex) {
     this.name = uname;
-    this, age = age;
+    this.age = age;
     this.sex = sex;
     this.sing = function (sang) {
         console.log(sang);
@@ -84,25 +98,39 @@ var zbz = new Star("张柏芝", 18, "女");
 console.log(zbz.name);
 console.log(zbz.age);
 //1.构造函数名字首字母要大写
-//2.构造函数不需要return就可以返回结果 
+//2.构造函数不需要return就可以返回结果
 //3.属性和方法前面必须添加this
 
 
 
+//new关键字执行过程
+//1.new构造函数可以在内存中创建一个空的对象
+//2.this就会指向刚才创建的空对象
+//3.执行构造函数里面的代码 给这个空对象添加属性和方法
+//4.返回这个对象（所以不需要return返回）
 
-// 对象方法
-//     对象的方法定义了一个函数，并作为对象的属性存储。
-//     对象方法通过添加 () 调用 (作为一个函数)。
-//     该实例访问了 person 对象的 fullName() 方法:加括号就直接输出值
-var person = {
-    firstName: "jone",
-    lastName: "doe",
-    id: 114514,
-    fullName: function () {
-        return this.firstName + " " + this.lastName;
+
+
+
+
+//遍历对象
+var obj = {
+    name: "pink老师",
+    age: 18,
+    sex: "男",
+    f: function () {
+
     }
-};
-document.getElementById("demo").innerHTML = person.fullName();//jone doe
+}
+//一般都是直接console.log(obj.name)；得到想要的值
 
-// 如果你要访问 person 对象的 fullName 属性，它将作为一个定义函数的字符串返回：不加括号输出函数表达式
-document.getElementById("demo").innerHTML = person.fullName;//fullName: function () {return this.firstName + " " + this.lastName;}
+//for in 遍历对象
+//for(变量 in 对象){}
+for (var k in obj) {
+    console.log(k);//k 变量 输出 得到的是属性名
+    console.log(obj[k]);//obj[k]得到属性值
+}
+
+
+
+
