@@ -13,3 +13,5 @@ console.log(Math.round(1.9));//2
 console.log(Math.round(-1.1));//-1
 console.log(Math.round(-1.5));//-1  .5是特殊情况，会往大了取(这里-1比-2更大所以这里去-1)
 console.log(Math.round(-1.9));//-2
+
+
