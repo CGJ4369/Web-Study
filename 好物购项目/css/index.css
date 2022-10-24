@@ -12,6 +12,11 @@
     background-color: blue;
 }
 
+.focus ul li img {
+    width: 100%;
+    height: 455px;
+}
+
 .newsflash {
     float: right;
     width: 250px;
